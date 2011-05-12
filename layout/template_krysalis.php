@@ -8,15 +8,10 @@
 <link rel="stylesheet" type="text/css" media="print" href="css/print.css" /> 
 <link rel="stylesheet" type="text/css" media="handeld" href="css/handeld.css" />
 <link rel="stylesheet" type="text/css" media="screen" href="css/screen.css" /> 
-<<<<<<< HEAD
 <script src="js/functions.js" type="text/javascript"></script>
 </head>
 <body>
 	<img src="images/logo_temp.png" alt="Krysalis" />
-=======
-</head>
-<body>
->>>>>>> origin/master
 	<a href="home.html">home</a>
 	<?php include  FILEROOT . '/modules/content.php'; ?>	
 </body>
