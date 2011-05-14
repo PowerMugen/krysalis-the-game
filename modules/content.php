@@ -1,23 +1,47 @@
 <?php
 
-// tableau associatif permettant de récupérer les pages dans les modules
-$pages = array(
-	null => 'home/index.php',
-	'home' => 'home/index.php',
-	'404' => '404.php',
-	'enquete' => 'investigation/index.php',
-);
-
-//echo '<pre>';
-//var_dump($_GET);
-//echo '</pre>';
-
-// lorqu'une page est appelée elle est vide ou renvoi au tableau associatif
+// testing if $_GET is empty
 if(empty($_GET)) {
-    $page = null;
+	//go back home you monster
+    $page = 'home';
+	$module = 'base';
 } else {
+	$module = $_GET['module'];
 	$page = $_GET['page'];
 }
+
+// our modules
+$modules = array (
+	'base' => '',
+	'home' => 'home/',
+	'investigation' => 'investigation/',
+);
+
+//testing if module exists
+if(isset($modules[$module])) {
+	//get module
+	$module = $_GET['module'];
+} else {
+	//show error page
+	$module = 'base';
+}
+
+// then the pages
+$pages = array(
+	'home' => $modules[$module] . 'index.php',
+	'404' => '404.php',
+	'enquete' => $modules[$module] . 'index.php',
+);
+
+//testing if page exists
+if(isset($pages[$page])) {
+	//show page
+	$page = $_GET['page'];
+} else {
+	//show error page
+	$page = '404';
+}
+
 
 // appel du fichier à inclure
 $file = FILEROOT . '/modules/' . $pages[$page];
