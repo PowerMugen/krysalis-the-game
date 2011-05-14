@@ -1,54 +1,68 @@
 <?php
 
 // testing if $_GET is empty
-if(empty($_GET)) {
-	//go back home you monster
-    $page = 'home';
-	$module = 'base';
+if (empty($_GET['page'])) {
+	$page = 'home';
 } else {
-	$module = $_GET['module'];
 	$page = $_GET['page'];
 }
 
-// our modules
-$modules = array (
-	'base' => '',
-	'home' => 'home/',
-	'investigation' => 'investigation/',
-);
-
-//testing if module exists
-if(isset($modules[$module])) {
-	//get module
+if (empty($_GET['module'])) {
+	$module = 'home';
+} else {
 	$module = $_GET['module'];
-} else {
-	//show error page
-	$module = 'base';
 }
 
-// then the pages
-$pages = array(
-	'home' => $modules[$module] . 'index.php',
-	'404' => '404.php',
-	'enquete' => $modules[$module] . 'index.php',
+// our modules > the pages inside each module
+$modules = array(
+	'modules' => array(
+		'investigation' => array(
+			'modulePath' => 'investigation/',
+			'config' => array(),
+			'pages' => array(
+				'enquete' => 'index.php',
+			),
+		),
+		'home' => array(
+			'modulePath' => 'home/',
+			'config' => array(),
+			'pages' => array(
+				'home' => 'index.php',
+			),
+		),
+	),
+	'pages' => array(
+		'404' => '404.php'
+	),
 );
 
-//testing if page exists
-if(isset($pages[$page])) {
-	//show page
-	$page = $_GET['page'];
-} else {
-	//show error page
-	$page = '404';
+if (isset($modules['pages'][$page])) {
+	$modulePath = '';
+	$pageFile = $modules['pages'][$page];
 }
-
+if (isset($modules['modules'][$module]) && empty($modules['modules'][$module]['pages'][$page])) {
+	$modulePath =  'modules/' . $modules['modules'][$module]['modulePath'];
+	$pageFile = 'index.php';
+}
+if (isset($modules['modules'][$module]) && !empty($modules['modules'][$module]['pages'][$page]) && !in_array($page, $modules['modules'][$module]['pages'])) {
+	$modulePath =  'modules/';
+	$pageFile = '404.php';
+}
+if (isset($modules['modules'][$module]) && isset($modules['modules'][$module]['pages'][$page])) {
+	$modulePath =  'modules/' . $modules['modules'][$module]['modulePath'];
+	$pageFile = $modules['modules'][$module]['pages'][$page];
+}
 
 // appel du fichier à inclure
-$file = FILEROOT . '/modules/' . $pages[$page];
+if (isset($modulePath) && isset($pageFile)) {
+	$file = FILEROOT . $modulePath . $pageFile;
+} else {
+	$file = 'modules/404.php';
+}
+
+var_dump($file);
 
 // include du fichier correspondant
-if (isset($pages[$page]) && is_file($file)) {
-   include $file;
-};
+include $file;
 
 ?>
