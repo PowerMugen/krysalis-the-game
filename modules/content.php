@@ -20,6 +20,7 @@ $modules = array(
 			'modulePath' => 'investigation/',
 			'config' => array(),
 			'pages' => array(
+				'index' => 'index.php',
 				'enquete' => 'index.php',
 			),
 		),
@@ -40,11 +41,7 @@ if (isset($modules['pages'][$page])) {
 	$modulePath = '';
 	$pageFile = $modules['pages'][$page];
 }
-if (isset($modules['modules'][$module]) && empty($modules['modules'][$module]['pages'][$page])) {
-	$modulePath =  'modules/' . $modules['modules'][$module]['modulePath'];
-	$pageFile = 'index.php';
-}
-if (isset($modules['modules'][$module]) && !empty($modules['modules'][$module]['pages'][$page]) && !in_array($page, $modules['modules'][$module]['pages'])) {
+if (isset($modules['modules'][$module]) && !empty($page) && !in_array($page, $modules['modules'][$module]['pages']))  {
 	$modulePath =  'modules/';
 	$pageFile = '404.php';
 }

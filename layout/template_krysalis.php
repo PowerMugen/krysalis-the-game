@@ -13,6 +13,7 @@
 <body>
 	<img src="images/logo_temp.png" alt="Krysalis" />
 	<a href="?module=investigation">investigation</a>
+    <a href="?module=investigation&page=index">investigation</a>
     <a href="?module=investigation&page=enquete">investigation</a>
     
     <a href="?module=investigation&page=home">erreur</a>
