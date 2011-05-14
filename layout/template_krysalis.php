@@ -12,7 +12,15 @@
 </head>
 <body>
 	<img src="images/logo_temp.png" alt="Krysalis" />
-	<a href="home.html">home</a>
+	<a href="?module=investigation">investigation</a>
+    <a href="?module=investigation&page=index">investigation</a>
+    <a href="?module=investigation&page=enquete">investigation</a>
+    
+    <a href="?module=investigation&page=home">erreur</a>
+    
+    <a href="?page=home">home</a>
+    <a href="?module=test&page=test"> erreur </a>
+    <br />
 	<?php include  FILEROOT . '/modules/content.php'; ?>	
 </body>
 </html>
