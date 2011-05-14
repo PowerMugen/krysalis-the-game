@@ -37,14 +37,22 @@ $modules = array(
 	),
 );
 
+//case where page is defined but not module
 if (isset($modules['pages'][$page])) {
 	$modulePath = '';
 	$pageFile = $modules['pages'][$page];
 }
+//case where module is defined but not page
+if (isset($modules['modules'][$module]) && empty($modules['modules'][$module]['pages'][$page])) {
+	$modulePath =  'modules/' . $modules['modules'][$module]['modulePath'];
+	$pageFile = 'index.php';
+}
+//case where module is defined but page is not in array
 if (isset($modules['modules'][$module]) && !empty($page) && !in_array($page, $modules['modules'][$module]['pages']))  {
 	$modulePath =  'modules/';
 	$pageFile = '404.php';
 }
+//case where module and page are defined
 if (isset($modules['modules'][$module]) && isset($modules['modules'][$module]['pages'][$page])) {
 	$modulePath =  'modules/' . $modules['modules'][$module]['modulePath'];
 	$pageFile = $modules['modules'][$module]['pages'][$page];
@@ -57,9 +65,5 @@ if (isset($modulePath) && isset($pageFile)) {
 	$file = 'modules/404.php';
 }
 
-var_dump($file);
-
 // include du fichier correspondant
 include $file;
-
-?>

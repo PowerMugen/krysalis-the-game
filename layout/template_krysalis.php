@@ -20,7 +20,7 @@
     
     <a href="?page=home">home</a>
     <a href="?module=test&page=test"> erreur </a>
-    
+    <br />
 	<?php include  FILEROOT . '/modules/content.php'; ?>	
 </body>
 </html>
