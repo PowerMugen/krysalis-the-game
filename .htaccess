@@ -1,0 +1,18 @@
+# Mise en place de la ré-écriture 
+Options +FollowSymLinks
+Options +Indexes
+RewriteEngine On
+
+# Adresse de base de réécriture 
+RewriteBase /
+
+# Règles de ré-écriture
+#RewriteRule admin/(.+)\.html$ /krysalis-the-game/admin/?page=$1&%{QUERY_STRING} [L]
+
+RewriteRule ^([^/]+)\/([^/]+)\.html$ /krysalis-the-game/?module=$1&page=$2 [L]
+RewriteRule ^([^/]+)\.html$ /krysalis-the-game/?page=$2 [L]
+RewriteRule ^([^/]+)\/$ /krysalis-the-game/?module=$1&page=index [L]
+
+#RewriteRule Twec/(.+)\.html$ /krysalis-the-game/?page=Twec$1&%{QUERY_STRING} [L]
+#RewriteRule Wonder_Miniatures/(.+)\.html$ /krysalis-the-game/?page=wonderMinis$1&%{QUERY_STRING} [L]
+#RewriteRule Projet/(.+)\.html$ /krysalis-the-game/?page=projet$1&%{QUERY_STRING} [L]
