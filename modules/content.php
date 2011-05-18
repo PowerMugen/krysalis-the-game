@@ -24,6 +24,13 @@ $modules = array(
 				'enquete' => 'index.php',
 			),
 		),
+		'users' => array(
+			'modulePath' => 'users/',
+			'config' => array(),
+			'pages' => array(
+				'index' => 'index.php',
+			),
+		),
 		'home' => array(
 			'modulePath' => 'home/',
 			'config' => array(),
@@ -42,11 +49,6 @@ if (isset($modules['pages'][$page])) {
 	$modulePath = '';
 	$pageFile = $modules['pages'][$page];
 }
-//case where module is defined but not page
-if (isset($modules['modules'][$module]) && empty($modules['modules'][$module]['pages'][$page])) {
-	$modulePath =  'modules/' . $modules['modules'][$module]['modulePath'];
-	$pageFile = 'index.php';
-}
 //case where module is defined but page is not in array
 if (isset($modules['modules'][$module]) && !empty($page) && !in_array($page, $modules['modules'][$module]['pages']))  {
 	$modulePath =  'modules/';
@@ -62,7 +64,7 @@ if (isset($modules['modules'][$module]) && isset($modules['modules'][$module]['p
 if (isset($modulePath) && isset($pageFile)) {
 	$file = FILEROOT . $modulePath . $pageFile;
 } else {
-	$file = 'modules/404.php';
+	$file = FILEROOT . 'modules/404.php';
 }
 
 // include du fichier correspondant

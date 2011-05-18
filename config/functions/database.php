@@ -21,5 +21,27 @@ function closeDb(){
 		
 }
 
+//create a new class for user
+class user {
+	private $user_id, $user_mail_login, $user_password;
+}
+
+//get the user from db
+function getUser($colName, $param, $hostname, $username, $password, $dbname)
+{
+
+	//connexion to database
+	connexionDb($hostname, $username, $password, $dbname);
+	
+	//get user with colname and param
+	$query = "SELECT * FROM users WHERE " . $colName . "=". $param;
+	
+	$result = mysql_query($query);
+	
+	return mysql_fetch_object($result, 'user');
+	
+	closeDb();
+	
+}
 
 ?>
