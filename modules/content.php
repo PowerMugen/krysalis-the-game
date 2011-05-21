@@ -13,7 +13,7 @@ if (empty($_GET['module'])) {
 	$module = $_GET['module'];
 }
 
-// our modules > the pages inside each module
+/* our modules > the pages inside each module
 $modules = array(
 	'modules' => array(
 		'investigation' => array(
@@ -36,6 +36,7 @@ $modules = array(
 			'config' => array(),
 			'pages' => array(
 				'home' => 'index.php',
+				'contactez-nous' => 'index.php',
 			),
 		),
 	),
@@ -43,6 +44,7 @@ $modules = array(
 		'404' => '404.php'
 	),
 );
+
 
 //case where page is defined but not module
 if (isset($modules['pages'][$page])) {
@@ -66,6 +68,7 @@ if (isset($modulePath) && isset($pageFile)) {
 } else {
 	$file = FILEROOT . 'modules/404.php';
 }
+*/
 
 // include du fichier correspondant
-include $file;
+//include $file;
