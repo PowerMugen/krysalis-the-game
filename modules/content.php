@@ -23,7 +23,7 @@ if (!file_exists($path = FILEROOT.'/modules/'.$module.'/'.$page.'.php')) {
 		$path = Routes::definePath($module, $page);
 	}
 
-	$path = FILEROOT.'/404.php';
+	$path = FILEROOT.'/modules/404.php';
 }
 
 // include du fichier correspondant

@@ -14,10 +14,10 @@
 	<img src="images/logo_temp.png" alt="Krysalis" />
 	<a href="home.html">home</a>
     <a href="investigation/">Enquete</a>
-    <a href="investigation/enquete.html">Enquete.html</a>
+    <a href="investigation/index.html">Enquete.html</a>
 	<a href="users/">Joueurs</a>    
     <a href="test/test.html"> erreur </a>
-    <a href="home/contactez-nous.html"> contact </a>
+    <a href="home/contact.html"> contact </a>
     <br />
 	<?php include  FILEROOT.'modules/content.php'; ?>	
 </body>
