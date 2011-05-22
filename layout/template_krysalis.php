@@ -19,6 +19,6 @@
     <a href="test/test.html"> erreur </a>
     <a href="home/contactez-nous.html"> contact </a>
     <br />
-	<?php include  FILEROOT . '../modules/content.php'; ?>	
+	<?php include  FILEROOT.'modules/content.php'; ?>	
 </body>
 </html>

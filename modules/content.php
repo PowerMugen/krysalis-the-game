@@ -2,48 +2,33 @@
 
 // testing if $_GET is empty
 if (empty($_GET['page'])) {
-	$page = 'home';
+	$page = 'index';
+
 } else {
 	$page = $_GET['page'];
 }
 
 if (empty($_GET['module'])) {
 	$module = 'home';
+
 } else {
 	$module = $_GET['module'];
 }
 
+if (!file_exists($path = FILEROOT.'/modules/'.$module.'/'.$page.'.php') {
+
+	require_once FILEROOT.'/config/routes.php';
+
+	if (isSpecific($module, $page)) {
+		$path = definePath($module, $page);
+	}
+
+	$path = FILEROOT.'/404.php';
+}
+
+echo 'include '.$module.'/'.$page;
+
 /* our modules > the pages inside each module
-$modules = array(
-	'modules' => array(
-		'investigation' => array(
-			'modulePath' => 'investigation/',
-			'config' => array(),
-			'pages' => array(
-				'index' => 'index.php',
-				'enquete' => 'index.php',
-			),
-		),
-		'users' => array(
-			'modulePath' => 'users/',
-			'config' => array(),
-			'pages' => array(
-				'index' => 'index.php',
-			),
-		),
-		'home' => array(
-			'modulePath' => 'home/',
-			'config' => array(),
-			'pages' => array(
-				'home' => 'index.php',
-				'contactez-nous' => 'index.php',
-			),
-		),
-	),
-	'pages' => array(
-		'404' => '404.php'
-	),
-);
 
 
 //case where page is defined but not module
