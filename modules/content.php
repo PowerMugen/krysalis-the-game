@@ -15,12 +15,12 @@ if (empty($_GET['module'])) {
 	$module = $_GET['module'];
 }
 
-if (!file_exists($path = FILEROOT.'/modules/'.$module.'/'.$page.'.php') {
+if (!file_exists($path = FILEROOT.'/modules/'.$module.'/'.$page.'.php')) {
 
 	require_once FILEROOT.'/config/routes.php';
 
-	if (isSpecific($module, $page)) {
-		$path = definePath($module, $page);
+	if (Routes::isSpecific($module, $page)) {
+		$path = Routes::definePath($module, $page);
 	}
 
 	$path = FILEROOT.'/404.php';
@@ -56,4 +56,4 @@ if (isset($modulePath) && isset($pageFile)) {
 */
 
 // include du fichier correspondant
-//include $file;
+include $path;
