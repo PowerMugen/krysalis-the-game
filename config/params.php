@@ -17,16 +17,16 @@ $connexion = array (
 );
 
 // path to files
-define ('FILEROOT', $_SERVER["DOCUMENT_ROOT"] . $siteInfos['base_url']);
+define ('FILEROOT', $_SERVER["DOCUMENT_ROOT"].'/');
 
 // path to web access
-define ('WEBROOT', 'http://' . $_SERVER["HTTP_HOST"] . '/' . $siteInfos['base_url']);
+define ('WEBROOT', 'http://' . $_SERVER["HTTP_HOST"].'/');
 
 // path to storage
-define ('UPLOADROOT', $_SERVER["DOCUMENT_ROOT"] . 'storage/');
+define ('UPLOADROOT', $_SERVER["DOCUMENT_ROOT"].'storage/');
 
 // path to admin
-define ('ADMINROOT', WEBROOT . 'admin/');
+define ('ADMINROOT', WEBROOT.'admin/');
 
 //include functions
-include_once FILEROOT . 'config/functions/database.php';
+include_once FILEROOT.'../config/functions/database.php';
