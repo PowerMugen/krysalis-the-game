@@ -1,3 +1,188 @@
 @charset "utf-8";
 /* the nice Bof's CSS */
+/* GENERAL */
+body{
+	background-image : url('../images/fond_principal.jpg');
+	background-position : center top;
+	padding : 0;
+	font-family: Arial, Helvetica, FreeSans, sans-serif;
+}
 
+#centrage{
+	width : 995px;
+	margin : 0 auto;
+}
+
+#content{
+clear : right;
+margin : 95px 10px 0 10px;
+}
+/* FIN GENERAL*/
+/* HEADER */
+
+#header{
+	margin : 5px 10px 0 10px;	
+
+}
+#password, #identifiant{
+	width : 125px;
+	height : 20px;
+	border : none;
+	background : transparent url('../images/fond_blancTransparent.png');
+	text-indent : 5px;
+	color : #666666;
+	font-size : 12px;
+	margin : 0 3px;
+}
+#btn_connexion{
+	width : 92px;
+	height : 22px;
+	border : none;
+	background : transparent url('../images/btn_connexion.png') no-repeat left top;
+	color : #666666;
+	margin-left : 3px;
+}
+#btn_connexion:hover{
+	background-position : left center;
+}
+#btn_connexion:active{
+	background-position : left bottom;
+	color : #ffffff;
+}
+#connexion, #recherche{
+	text-align : right;
+	}
+#header img{
+	margin : -22px 0 0 20px;
+}
+#header img.right{
+	float : right;
+	margin : 10px 10px 0 0;
+	}
+/* FIN HEADER*/	
+/* MENU PRINCIPAL + RECHERCHE */
+#menu_main{
+	position : relative;	
+}
+	
+#recherche{
+	position : absolute;
+	top : 0;
+	right : 10px;
+	z-index : 1000;
+}
+
+#btn_recherche{
+	width : 57px;
+	height : 38px;
+	border : none;
+	margin : -4px 0 0 6px ;
+	background : transparent url('../images/btn_recherche.png') no-repeat left top;
+	text-indent : -9999px;
+}
+#btn_recherche:hover{
+	background-position : left center;
+}
+#btn_recherche:active{
+	background-position : left bottom;
+}
+#champ_recherche{
+	width : 185px ; /* largeur de l'image de fond - le padding left*/
+	height : 42px ;
+	border : none;
+	line-height : 37px;
+	background : transparent url('../images/fond_champRecherche.png') no-repeat left center;
+	padding-left : 75px;	
+	color : #666666;
+}
+#ul_principal{
+position : relative;
+	margin : 2px 10px;
+	
+	}
+#home, #enquete, #joueurs, #communaute , #jeux{
+	position : absolute;
+	top : 2px;
+	height : 36px;
+	
+	text-transform : uppercase;
+	line-height : 36px;
+	vertical-align: middle;
+	font-size : 16px;
+}
+#home a, #enquete a, #joueurs a, #communaute a , #jeux a{
+	color : #fff;
+}
+
+#home:hover, #enquete:hover, #joueurs:hover, #communaute:hover , #jeux:hover{
+	background : transparent url('../images/fond_blancTransparent.png');
+}
+#home:hover a, #enquete:hover a, #joueurs:hover a, #communaute:hover a , #jeux:hover a{
+	color : #333;
+}
+#home{
+	width : 735px; /* 995 - (#ul_principal margin-right + 250px + this left )*/
+	left : 0px;
+	z-index : 100;
+}
+#enquete{
+	width : 665px; /* 995 - (#ul_principal margin-right + 250px + this left )*//* 995 - (#ul_principal margin-right + 250px + this left )*/
+	left : 80px;
+	z-index : 200;
+}
+#joueurs{
+	width : 545px; /* 995 - (#ul_principal margin-right + 250px + this left )*//* 995 - (#ul_principal margin-right + 250px + this left )*/
+	left : 190px;
+	z-index : 300;
+}
+#communaute{
+	width : 437px; /* 995 - (#ul_principal margin-right + 250px + this left )*//* 995 - (#ul_principal margin-right + 250px + this left )*/
+	left : 298px;
+	z-index : 400;
+}
+#ssMenu_communaute, #ssMenu_home, #ssMenu_joueurs{
+	width : 995%;
+	margin : 36px 0 0 0;
+	position : absolute;
+	font-size : 14px;
+/*	background : transparent url('../images/fond_blancTransparent.png');*/
+}
+#ssMenu_communaute{
+	margin-left : -412px;/* #communaute left + largeur du texte dans son lien a */
+}
+#ssMenu_home{
+	margin-left : -47px;/* #home left + largeur du texte dans son lien a */
+}
+#ssMenu_joueurs{
+	margin-left : -265px;/* #joueur left + largeur du texte dans son lien a */
+}
+
+#jeux{
+	width : 290px; /* 995 - (#ul_principal margin-right + 250px + this left )*//* 995 - (#ul_principal margin-right + 250px + this left )*/
+	left : 445px;
+	z-index : 500;
+}
+#ssMenu_communaute{
+	margin-left : -422px;/* #communaute left + largeur du texte dans son lien a + #ul_principal padding-left */
+}
+#ssMenu_home{
+	margin-left : -57px;/* #home left + largeur du texte dans son lien a + #ul_principal padding-left*/
+}
+#ssMenu_joueurs{
+	margin-left : -275px;/* #joueur left + largeur du texte dans son lien a + #ul_principal padding-left*/
+}
+
+
+#ul_principal ul.hidden{
+	display : none;	
+}
+#ul_principal ul.visible{
+	display : inline-block;
+}
+#ul_principal li{
+	display : inline-block;
+	padding : 0 10px;
+}
+
+
+/* FIN MENU PRINCIPAL + RECHERCHE */
