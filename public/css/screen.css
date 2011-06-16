@@ -1,6 +1,6 @@
 @charset "utf-8";
 /* the nice Bof's CSS */
-/* GENERAL */
+/* ------ GENERAL --------------- */
 body{
 	background-image : url('../images/fond_principal.jpg');
 	background-position : center top;
@@ -15,10 +15,10 @@ body{
 
 #content{
 clear : right;
-margin : 95px 10px 0 10px;
+margin : 75px 10px 0 10px;
 }
 /* FIN GENERAL*/
-/* HEADER */
+/* -----------HEADER ------------------ */
 
 #header{
 	margin : 5px 10px 0 10px;	
@@ -60,7 +60,7 @@ margin : 95px 10px 0 10px;
 	margin : 10px 10px 0 0;
 	}
 /* FIN HEADER*/	
-/* MENU PRINCIPAL + RECHERCHE */
+/* --------------- MENU PRINCIPAL + RECHERCHE ------------------------- */
 #menu_main{
 	position : relative;	
 }
@@ -186,3 +186,94 @@ position : relative;
 
 
 /* FIN MENU PRINCIPAL + RECHERCHE */
+/* ------------ CARROUSEL--------------------------- */
+
+
+/* FIN DU CARROUSEL*/
+#carrousel{
+	position :relative;
+	width : 995px;
+	height : 362px;
+	margin-left : -9px;
+	background : url('../images/carrousel/bg_carrousel.png') no-repeat top left;
+	
+}
+.slide{
+	position :absolute;
+	top : 19px;
+	left : 19px;
+	width : 960px;
+	height : 326px;
+	/*visibility:hidden;*/
+}
+
+.title{
+	position :absolute;
+	bottom : 81px;
+	left : 0px;
+	height : 67px;
+	width : 925px;
+	margin : 0;
+	padding : 14px 0 0 35px;
+	background-image : url('../images/carrousel/bg_titre.png');
+	color : white;
+	
+}
+.navigation{
+	position :absolute;
+	top : 18px;
+	right : 16px;
+}
+.navigation h3{
+	color : white;
+	margin : 0;
+	width : 216px;
+	height : 82px;
+	line-height : 82px;
+	vertical-align : middle;
+	padding-left : 23px;
+	background : url('../images/carrousel/btn_pagHaut.png') no-repeat top left;
+}
+/*.haut{
+	background : url('../images/carrousel/btn_pagHaut.png') no-repeat top left;
+}
+
+.bas{
+	background : url('../images/carrousel/btn_pagBas.png') no-repeat top left;
+}*/
+
+.navigation h3:hover, .navigation h3.active{
+	/*position : absolute;*/
+	/*right : -40px;
+	width : 293px;
+	height : 123px;
+	/*z-index : 50;*/
+	/*background-position : 0 -82px;*/
+	background-position : left bottom;
+}
+/*#navigation h3.haut:hover{
+	margin-bottom: -34px;
+	line-height : 93px;
+}
+#navigation h3.bas:hover{
+	margin-top: -34px;
+	line-height : 157px;
+}*/
+.navigation h3:active{
+	/*position : absolute;*/
+	/*right : -40px;
+	width : 293px;
+	height : 123px;*/
+	/*z-index : 50;*/
+	background-position : left top;
+}
+
+
+#resume{
+	/*position : absolute;*/
+	/*z-index : -10;*/
+	/*top : 300px;*/
+	margin-top : -81px;
+	padding : 111px 69px 10px 69px;
+	background : url('../images/bg_resumeHome.png') repeat-y center top;
+	}

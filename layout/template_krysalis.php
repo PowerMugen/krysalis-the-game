@@ -8,6 +8,7 @@
 <link rel="stylesheet" type="text/css" media="print" href="css/print.css" /> 
 <link rel="stylesheet" type="text/css" media="handeld" href="css/handeld.css" />
 <link rel="stylesheet" type="text/css" media="screen" href="css/screen.css" /> 
+<script src="js/jquery1.6.1.js" type="text/javascript"></script>
 <script src="js/functions.js" type="text/javascript"></script>
 </head>
 <body>
