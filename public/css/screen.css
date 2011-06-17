@@ -17,6 +17,11 @@ body{
 clear : right;
 margin : 75px 10px 0 10px;
 }
+
+.flleft {float:left;}
+.flright {float:right;}
+.clear { height:0; line-height:0; margin:0; padding:0; font-size:0; }
+
 /* FIN GENERAL*/
 /* -----------HEADER ------------------ */
 
@@ -44,6 +49,7 @@ margin : 75px 10px 0 10px;
 }
 #btn_connexion:hover{
 	background-position : left center;
+	cursor:pointer;
 }
 #btn_connexion:active{
 	background-position : left bottom;
@@ -61,7 +67,7 @@ margin : 75px 10px 0 10px;
 	}
 /* FIN HEADER*/	
 /* --------------- MENU PRINCIPAL + RECHERCHE ------------------------- */
-#menu_main{	position : relative;}
+#menu_main{	position : relative; }
 	
 #recherche{
 	position : absolute;
@@ -93,22 +99,41 @@ margin : 75px 10px 0 10px;
 	padding-left : 75px;	
 	color : #666666;
 }
-#ul_principal{
-position : relative;
-	margin : 2px 10px;
-	
-	}
-#home, #enquete, #joueurs, #communaute , #jeux{
+
+/* Menu */
+
+#ul_principal {
+	position : relative;
+	margin : 2px 10px;	
+	width: 713px;
+}
+
+#ul_principal li {
+	display:inline;
+	flaot:left;
+}
+
+#ul_principal li a {
+	display:inline-block;
+	height : 36px;
+	text-transform : uppercase;
+	line-height : 36px;
+	vertical-align: middle;
+	font-size : 16px;
+	color : #fff;
+	position:relative;
+}
+
+/*#krysalis, #home, #enquete, #joueurs, #communaute , #jeux {
 	position : absolute;
 	top : 2px;
 	height : 36px;
-	
 	text-transform : uppercase;
 	line-height : 36px;
 	vertical-align: middle;
 	font-size : 16px;
 }
-#home a, #enquete a, #joueurs a, #communaute a , #jeux a{
+#krysalis a, #home a, #enquete a, #joueurs a, #communaute a , #jeux a{
 	color : #fff;
 }
 
@@ -117,57 +142,74 @@ position : relative;
 }
 #home:hover a, #enquete:hover a, #joueurs:hover a, #communaute:hover a , #jeux:hover a{
 	color : #333;
-}
+}*
 #home{
-	width : 735px; /* 995 - (#ul_principal margin-right + 250px + this left )*/
+	width : 735px; /* 995 - (#ul_principal margin-right + 250px + this left )*
 	left : 0px;
 	z-index : 100;
 }
 #enquete{
-	width : 665px; /* 995 - (#ul_principal margin-right + 250px + this left )*//* 995 - (#ul_principal margin-right + 250px + this left )*/
+	width : 665px; /* 995 - (#ul_principal margin-right + 250px + this left )*//* 995 - (#ul_principal margin-right + 250px + this left )*
 	left : 80px;
 	z-index : 200;
 }
 #joueurs{
-	width : 545px; /* 995 - (#ul_principal margin-right + 250px + this left )*//* 995 - (#ul_principal margin-right + 250px + this left )*/
+	width : 545px; /* 995 - (#ul_principal margin-right + 250px + this left )*//* 995 - (#ul_principal margin-right + 250px + this left )*
 	left : 190px;
 	z-index : 300;
 }
 #communaute{
-	width : 437px; /* 995 - (#ul_principal margin-right + 250px + this left )*//* 995 - (#ul_principal margin-right + 250px + this left )*/
+	width : 437px; /* 995 - (#ul_principal margin-right + 250px + this left )*//* 995 - (#ul_principal margin-right + 250px + this left )*
 	left : 298px;
 	z-index : 400;
 }
-#ssMenu_communaute, #ssMenu_home, #ssMenu_joueurs{
-	width : 995%;
-	margin : 36px 0 0 0;
-	position : absolute;
-	font-size : 14px;
-/*	background : transparent url('../images/fond_blancTransparent.png');*/
-}
-#ssMenu_communaute{
-	margin-left : -412px;/* #communaute left + largeur du texte dans son lien a */
-}
-#ssMenu_home{
-	margin-left : -47px;/* #home left + largeur du texte dans son lien a */
-}
-#ssMenu_joueurs{
-	margin-left : -265px;/* #joueur left + largeur du texte dans son lien a */
-}
-
 #jeux{
-	width : 290px; /* 995 - (#ul_principal margin-right + 250px + this left )*//* 995 - (#ul_principal margin-right + 250px + this left )*/
+	width : 290px; /* 995 - (#ul_principal margin-right + 250px + this left )*//* 995 - (#ul_principal margin-right + 250px + this left )*
 	left : 445px;
 	z-index : 500;
+}*/
+#ul_principal li ul {
+	width : 995px;
+	position : absolute;
+	font-size : 14px;
+	top: 36px;
+	left:0;
+/*	background : transparent url('../images/fond_blancTransparent.png');*/
+}
+#menu_main .jeux {
+	background : transparent url('../images/fond_blancTransparent.png') 435px 2px no-repeat;
+}
+#menu_main .communaute {
+	background : transparent url('../images/fond_blancTransparent.png') 295px 2px no-repeat;
+}
+#menu_main .joueurs {
+	background : transparent url('../images/fond_blancTransparent.png') 195px 2px no-repeat;
+}
+#menu_main .enquete {
+	background : transparent url('../images/fond_blancTransparent.png') 95px 2px no-repeat;
+}
+#menu_main .krysalis {
+	background : transparent url('../images/fond_blancTransparent.png') 0px 2px no-repeat;
 }
 #ssMenu_communaute{
-	margin-left : -422px;/* #communaute left + largeur du texte dans son lien a + #ul_principal padding-left */
+	/*margin-left : -412px;/* #communaute left + largeur du texte dans son lien a */
 }
 #ssMenu_home{
-	margin-left : -57px;/* #home left + largeur du texte dans son lien a + #ul_principal padding-left*/
+	/*margin-left : -47px;/* #home left + largeur du texte dans son lien a */
 }
 #ssMenu_joueurs{
-	margin-left : -275px;/* #joueur left + largeur du texte dans son lien a + #ul_principal padding-left*/
+	/*margin-left : -265px;/* #joueur left + largeur du texte dans son lien a */
+}
+
+
+#ssMenu_communaute{
+	/*margin-left : -422px;/* #communaute left + largeur du texte dans son lien a + #ul_principal padding-left */
+}
+#ssMenu_home{
+	/*margin-left : -57px;/* #home left + largeur du texte dans son lien a + #ul_principal padding-left*/
+}
+#ssMenu_joueurs{
+	/*margin-left : -275px;/* #joueur left + largeur du texte dans son lien a + #ul_principal padding-left*/
 }
 
 
@@ -175,10 +217,10 @@ position : relative;
 	display : none;	
 }
 #ul_principal ul.visible{
-	display : inline-block;
+	display : inline;
 }
 #ul_principal li{
-	display : inline-block;
+	display : inline;
 	padding : 0 10px;
 }
 

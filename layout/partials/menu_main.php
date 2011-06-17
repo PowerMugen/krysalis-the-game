@@ -8,7 +8,7 @@
                     <input type="submit" value="rechercher" id="btn_recherche"/>
                 </fieldset>
     </form>
-    <ul id="ul_principal">
+    <ul id="ul_principal" >
         <li id="krysalis" onmouseover="display_ss_menu('ssMenu_home');" onmouseout="display_ss_menu('ssMenu_home');">
         	<a href="krysalis.html">Krysalis</a>
             <ul id="ssMenu_home" class="hidden" >

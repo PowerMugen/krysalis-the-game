@@ -36,4 +36,4 @@ strong { font-weight: bold }
 /* Formulaires */
 form, fieldset { margin: 0; padding: 0; border: none; }
 input, button, select { vertical-align: middle; /* Solution pb. d'alignement. (9) */ }
-br, hr{display : none;}
+/*br, hr{display : none;}*/
