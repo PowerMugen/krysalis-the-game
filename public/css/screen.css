@@ -61,9 +61,7 @@ margin : 75px 10px 0 10px;
 	}
 /* FIN HEADER*/	
 /* --------------- MENU PRINCIPAL + RECHERCHE ------------------------- */
-#menu_main{
-	position : relative;	
-}
+#menu_main{	position : relative;}
 	
 #recherche{
 	position : absolute;

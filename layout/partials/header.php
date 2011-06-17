@@ -11,7 +11,7 @@
             <input type="submit" value="connexion" id="btn_connexion"/>
             </fieldset>
         </form>
-        <img src="images/logo_krysalis.png" alt="Krysalis Project"/>
+        <a href="home.html"><img src="images/logo_krysalis.png" alt="Krysalis Project"/></a>
         <img src="images/logo_alta.png" alt="ALTA Corporation"class="right"/>        
     </div>
 <!-- FIN DU HEADER -->

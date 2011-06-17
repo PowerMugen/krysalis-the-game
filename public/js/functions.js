@@ -71,7 +71,7 @@ var carrousel ={
 	},
 	play : function(){
 		 window.clearInterval(carrousel.timer);
-		 carrousel.timer = window.setInterval('carrousel.next()', 3000);
+		 carrousel.timer = window.setInterval('carrousel.next()', 5000);
 	},
 }
 
