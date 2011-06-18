@@ -13,13 +13,14 @@
 </head>
 <body>
 	<div id="centrage">
-	<?php include  FILEROOT.'layout/partials/header.php'; ?>
-
+	<?php include  FILEROOT.'layout/partials/header.php'; ?>	
 	<?php include  FILEROOT.'layout/partials/menu_main.php'; ?>	
-
 	<!--<img src="images/logo_temp.png" alt="Krysalis" />-->
 	
   <?php include  FILEROOT.'modules/content.php'; ?>	
-  </div>
+  <div class="flleft">flleft</div>
+  <div class="flright">flright</div>
+	<br class="clear" /> 
+  <div>retourdans le flux</div>
 </body>
 </html>

@@ -1,16 +1,45 @@
-// JavaScript Document
+function init()
+{
+	// Apparition du 2eme niveau du menu principal
+	
+	slideBackground();
+	
+	// CARROUSEL JQUERY
+	carrousel.init($('#carrousel'));
+	
+}
+
 
 // Apparition du 2eme niveau du menu principal
 
 function display_ss_menu( element ) {
-				var etat = document.getElementById( element ).className;
-				if( etat == 'hidden' ) {
-					document.getElementById( element ).className = "visible";
-				} else {
-					document.getElementById( element ).className = "hidden";
-				}
-			}
-			
+	var etat = document.getElementById( element ).className;
+	if( etat == 'hidden' ) {
+		document.getElementById( element ).className = "visible";
+	} else {
+		document.getElementById( element ).className = "hidden";
+	}
+}
+
+
+// slide background
+function slideBackground()
+{
+	$('#ul_principal li').each(
+		function(){
+			var className =	$(this).attr('id');
+			$(this).hover(
+				function(){
+					$('#ul_principal').addClass(className);
+				},
+				function(){
+					$('#ul_principal').removeClass(className);
+			});
+	});
+}
+	
+	
+
 //	CARROUSEL JQUERY
 
 var carrousel ={
@@ -75,6 +104,10 @@ var carrousel ={
 	},
 }
 
+/***************************/
+/* initialisation du site  */
+/***************************/
+
 $(function(){
-		   carrousel.init($('#carrousel'));
+	init();
 });
