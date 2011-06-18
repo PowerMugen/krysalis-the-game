@@ -14,9 +14,9 @@
 <body>
 	<div id="centrage">
 	<?php include  FILEROOT.'layout/partials/header.php'; ?>
-    </br>	
+
 	<?php include  FILEROOT.'layout/partials/menu_main.php'; ?>	
-	</br>
+
 	<!--<img src="images/logo_temp.png" alt="Krysalis" />-->
 	
   <?php include  FILEROOT.'modules/content.php'; ?>	
