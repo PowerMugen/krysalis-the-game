@@ -1,5 +1,4 @@
 @charset "utf-8";
-/* the nice Bof's CSS */
 /* ------ GENERAL --------------- */
 body{
 	background-image : url('../images/fond_principal.jpg');
@@ -22,7 +21,7 @@ margin : 75px 10px 0 10px;
 .flright {float:right;}
 .clear { height:0; line-height:0; margin:0; padding:0; font-size:0; }
 
-/* FIN GENERAL*/
+/* ------------FIN GENERAL ------------------a*/
 /* -----------HEADER ------------------ */
 
 #header{
@@ -100,7 +99,7 @@ margin : 75px 10px 0 10px;
 	color : #666666;
 }
 
-/* Menu */
+/*----------------- MENU PRINCIPAL ------------------------------------*/
 
 #ul_principal {
 	position : relative;
@@ -124,57 +123,13 @@ margin : 75px 10px 0 10px;
 	position:relative;
 }
 
-/*#krysalis, #home, #enquete, #joueurs, #communaute , #jeux {
-	position : absolute;
-	top : 2px;
-	height : 36px;
-	text-transform : uppercase;
-	line-height : 36px;
-	vertical-align: middle;
-	font-size : 16px;
-}
-#krysalis a, #home a, #enquete a, #joueurs a, #communaute a , #jeux a{
-	color : #fff;
-}
-
-#home:hover, #enquete:hover, #joueurs:hover, #communaute:hover , #jeux:hover{
-	background : transparent url('../images/fond_blancTransparent.png');
-}
-#home:hover a, #enquete:hover a, #joueurs:hover a, #communaute:hover a , #jeux:hover a{
-	color : #333;
-}*
-#home{
-	width : 735px; /* 995 - (#ul_principal margin-right + 250px + this left )*
-	left : 0px;
-	z-index : 100;
-}
-#enquete{
-	width : 665px; /* 995 - (#ul_principal margin-right + 250px + this left )*//* 995 - (#ul_principal margin-right + 250px + this left )*
-	left : 80px;
-	z-index : 200;
-}
-#joueurs{
-	width : 545px; /* 995 - (#ul_principal margin-right + 250px + this left )*//* 995 - (#ul_principal margin-right + 250px + this left )*
-	left : 190px;
-	z-index : 300;
-}
-#communaute{
-	width : 437px; /* 995 - (#ul_principal margin-right + 250px + this left )*//* 995 - (#ul_principal margin-right + 250px + this left )*
-	left : 298px;
-	z-index : 400;
-}
-#jeux{
-	width : 290px; /* 995 - (#ul_principal margin-right + 250px + this left )*//* 995 - (#ul_principal margin-right + 250px + this left )*
-	left : 445px;
-	z-index : 500;
-}*/
 #ul_principal li ul {
 	width : 995px;
 	position : absolute;
 	font-size : 14px;
 	top: 36px;
 	left:0;
-/*	background : transparent url('../images/fond_blancTransparent.png');*/
+
 }
 #menu_main .jeux {
 	background : transparent url('../images/fond_blancTransparent.png') 435px 2px no-repeat;
@@ -191,28 +146,8 @@ margin : 75px 10px 0 10px;
 #menu_main .krysalis {
 	background : transparent url('../images/fond_blancTransparent.png') 0px 2px no-repeat;
 }
-#ssMenu_communaute{
-	/*margin-left : -412px;/* #communaute left + largeur du texte dans son lien a */
-}
-#ssMenu_home{
-	/*margin-left : -47px;/* #home left + largeur du texte dans son lien a */
-}
-#ssMenu_joueurs{
-	/*margin-left : -265px;/* #joueur left + largeur du texte dans son lien a */
-}
-
-
-#ssMenu_communaute{
-	/*margin-left : -422px;/* #communaute left + largeur du texte dans son lien a + #ul_principal padding-left */
-}
-#ssMenu_home{
-	/*margin-left : -57px;/* #home left + largeur du texte dans son lien a + #ul_principal padding-left*/
-}
-#ssMenu_joueurs{
-	/*margin-left : -275px;/* #joueur left + largeur du texte dans son lien a + #ul_principal padding-left*/
-}
-
-
+#ul_principal ul{
+	margin : 0;}
 #ul_principal ul.hidden{
 	display : none;	
 }
@@ -229,7 +164,7 @@ margin : 75px 10px 0 10px;
 /* ------------ CARROUSEL--------------------------- */
 
 
-/* FIN DU CARROUSEL*/
+
 #carrousel{
 	position :relative;
 	width : 995px;
@@ -244,7 +179,6 @@ margin : 75px 10px 0 10px;
 	left : 19px;
 	width : 960px;
 	height : 326px;
-	/*visibility:hidden;*/
 }
 
 .title{
@@ -274,46 +208,67 @@ margin : 75px 10px 0 10px;
 	padding-left : 23px;
 	background : url('../images/carrousel/btn_pagHaut.png') no-repeat top left;
 }
-/*.haut{
-	background : url('../images/carrousel/btn_pagHaut.png') no-repeat top left;
-}
-
-.bas{
-	background : url('../images/carrousel/btn_pagBas.png') no-repeat top left;
-}*/
 
 .navigation h3:hover, .navigation h3.active{
-	/*position : absolute;*/
-	/*right : -40px;
-	width : 293px;
-	height : 123px;
-	/*z-index : 50;*/
-	/*background-position : 0 -82px;*/
 	background-position : left bottom;
 }
-/*#navigation h3.haut:hover{
-	margin-bottom: -34px;
-	line-height : 93px;
-}
-#navigation h3.bas:hover{
-	margin-top: -34px;
-	line-height : 157px;
-}*/
+
 .navigation h3:active{
-	/*position : absolute;*/
-	/*right : -40px;
-	width : 293px;
-	height : 123px;*/
-	/*z-index : 50;*/
 	background-position : left top;
 }
 
 
 #resume{
-	/*position : absolute;*/
-	/*z-index : -10;*/
-	/*top : 300px;*/
 	margin-top : -81px;
 	padding : 111px 69px 10px 69px;
 	background : url('../images/bg_resumeHome.png') repeat-y center top;
 	}
+/*-------------- FIN DU CARROUSEL -----------------*/	
+/*------------  MENU DE PAGE ---------------------*/
+#menu_content{margin : 0;line-height : 38px;}
+#menu_content a{
+	display :block;
+	width : 201px;
+	height : 48px;
+	vertical-align : middle;
+	text-indent : 30px;
+	color : #666;
+	background : url('../images/bg_menuContent.png') no-repeat left center;
+}
+#menu_content ul{
+	line-height : 28px;
+	margin :0 0 0 10px ; }
+#menu_content  ul a{
+	display :block;
+	width : 201px;
+	height : 32px;
+	margin-top : -10px;
+	vertical-align : middle;
+	text-indent : 32px;
+	color : #fff;
+	background : url('../images/puce_catContent.png') no-repeat left center;
+}
+#menu_content  ul li:first-child a{
+	margin-top : 0px;
+}
+#menu_content  ul li:last-child a{
+	margin-bottom : 10px;
+}
+a.decal_categ{
+	margin-left : 20px;
+}
+#menu_content a:hover{
+	background-position : left top;
+	}
+#menu_content ul a:hover{
+	text-shadow : 2px 2px 4px #3e3e3e;
+}
+#menu_content a:active{
+	color : #fff;
+	background-position : left bottom;
+	}
+.categorie li{
+	/*background-color : red;*/
+	background-image : ('../images/puce_catContent.png');
+}
+/*------------ FIN MENU DE PAGE ---------------------*/

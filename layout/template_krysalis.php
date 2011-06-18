@@ -18,9 +18,9 @@
 	<!--<img src="images/logo_temp.png" alt="Krysalis" />-->
 	
   <?php include  FILEROOT.'modules/content.php'; ?>	
-  <div class="flleft">flleft</div>
+  <!--<div class="flleft">flleft</div>
   <div class="flright">flright</div>
 	<br class="clear" /> 
-  <div>retourdans le flux</div>
+  <div>retourdans le flux</div>-->
 </body>
 </html>
