@@ -3,9 +3,11 @@ function init()
 	// Apparition du 2eme niveau du menu principal
 	
 	slideBackground();
+	slideMenuContent();
 	
 	// CARROUSEL JQUERY
 	carrousel.init($('#carrousel'));
+	
 	
 }
 
@@ -21,20 +23,27 @@ function display_ss_menu( element ) {
 	}
 }
 
-
 // slide background
 function slideBackground()
 {
+	$('#ul_principal').css({"background-position" : "800px 2px"});
 	$('#ul_principal li').each(
-		function(){
-			var className =	$(this).attr('id');
-			$(this).hover(
-				function(){
-					$('#ul_principal').addClass(className);
-				},
-				function(){
-					$('#ul_principal').removeClass(className);
-			});
+	function(){
+		var className =	$(this).attr('id');
+		$(this).hover(
+			function(){
+				var position = $(this).position();
+				console.log(position.left);
+				$('#ul_principal').addClass(className);
+				$('#ul_principal').stop().animate({backgroundPosition: position.left + " 2px"});
+				$(this).find('a:first').css({'color' : '#333'});
+			},
+			function(){
+				$('#ul_principal').animate({backgroundPosition: "800px" + " 2px"});
+				$(this).find('a:first').css({'color' : '#fff'});
+				$('#ul_principal').removeClass(className).stop();
+			}
+		);
 	});
 }
 	
@@ -103,11 +112,22 @@ var carrousel ={
 		 carrousel.timer = window.setInterval('carrousel.next()', 5000);
 	},
 }
-
+// --------------------------MENU CONTENU -----------------------------
+function slideMenuContent(){
+		$('h4').next().hide();
+		$('h4').click(function(){
+			 if($(this).next('ul').is(':hidden')){
+            $('h4').next('ul:visible').slideUp(); //:visible toutes les div visibles.
+            $(this).next('ul').slideDown();				   
+			 }
+		});
+}
+//--------------------------FIN MENU CONTENU -------------------------------
 /***************************/
 /* initialisation du site  */
 /***************************/
 
 $(function(){
 	init();
+		 
 });
