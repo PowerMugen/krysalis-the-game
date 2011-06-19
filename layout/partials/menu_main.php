@@ -10,7 +10,7 @@
     </form>
     <ul id="ul_principal" >
         <li id="krysalis" onmouseover="display_ss_menu('ssMenu_home');" onmouseout="display_ss_menu('ssMenu_home');">
-        	<a href="krysalis.html">Krysalis</a>
+        	<a href="krysalis/">Krysalis</a>
             <ul id="ssMenu_home" class="hidden" >
                 <li><a href="javascript : void(0);">l'histoire</a></li>
                 <li><a href="javascript : void(0);">comment jouer</a></li>

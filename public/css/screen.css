@@ -13,8 +13,9 @@ body{
 }
 
 #content{
+	position :relative;
 clear : right;
-margin : 75px 10px 0 10px;
+margin : 75px 5px 0;
 }
 
 .flleft {float:left;}
@@ -108,8 +109,9 @@ margin : 75px 10px 0 10px;
 }
 
 #ul_principal li {
+	
 	display:inline;
-	flaot:left;
+	float:left;
 }
 
 #ul_principal li a {
@@ -132,16 +134,16 @@ margin : 75px 10px 0 10px;
 
 }
 #menu_main .jeux {
-	background : transparent url('../images/fond_blancTransparent.png') 435px 2px no-repeat;
+	background : transparent url('../images/fond_blancTransparent.png') no-repeat 250px 2px ;
 }
 #menu_main .communaute {
-	background : transparent url('../images/fond_blancTransparent.png') 295px 2px no-repeat;
+	background : transparent url('../images/fond_blancTransparent.png') 800px 2px no-repeat;
 }
 #menu_main .joueurs {
-	background : transparent url('../images/fond_blancTransparent.png') 195px 2px no-repeat;
+	background : transparent url('../images/fond_blancTransparent.png') 800px 2px no-repeat;
 }
 #menu_main .enquete {
-	background : transparent url('../images/fond_blancTransparent.png') 95px 2px no-repeat;
+	background : transparent url('../images/fond_blancTransparent.png') 800px 2px no-repeat;
 }
 #menu_main .krysalis {
 	background : transparent url('../images/fond_blancTransparent.png') 0px 2px no-repeat;
@@ -225,8 +227,11 @@ margin : 75px 10px 0 10px;
 	}
 /*-------------- FIN DU CARROUSEL -----------------*/	
 /*------------  MENU DE PAGE ---------------------*/
-#menu_content{margin : 0;line-height : 38px;}
-#menu_content a{
+#menu_content{ position : relative;float : left;}
+#menu{margin : 0; font-size : 0.9em;}
+#menu h4{margin : 0; font-weight : normal;line-height : 38px;}
+
+#menu h4 a{
 	display :block;
 	width : 201px;
 	height : 48px;
@@ -235,40 +240,215 @@ margin : 75px 10px 0 10px;
 	color : #666;
 	background : url('../images/bg_menuContent.png') no-repeat left center;
 }
-#menu_content ul{
+#menu h4 a{cursor : pointer;}
+#menu ul{
 	line-height : 28px;
 	margin :0 0 0 10px ; }
-#menu_content  ul a{
+#menu ul a{
 	display :block;
-	width : 201px;
+	width : inherit;
 	height : 32px;
-	margin-top : -10px;
+	margin-top : -8px;
 	vertical-align : middle;
 	text-indent : 32px;
 	color : #fff;
+	
 	background : url('../images/puce_catContent.png') no-repeat left center;
 }
-#menu_content  ul li:first-child a{
+#menu ul li:first-child a{
 	margin-top : 0px;
 }
-#menu_content  ul li:last-child a{
+#menu ul li:last-child a{
 	margin-bottom : 10px;
 }
 a.decal_categ{
 	margin-left : 20px;
 }
-#menu_content a:hover{
+#menu a:hover{
 	background-position : left top;
 	}
-#menu_content ul a:hover{
+#menu ul a:hover{
 	text-shadow : 2px 2px 4px #3e3e3e;
 }
-#menu_content a:active{
+#menu a:active{
 	color : #fff;
 	background-position : left bottom;
 	}
-.categorie li{
-	/*background-color : red;*/
-	background-image : ('../images/puce_catContent.png');
+
+#reseaux_sociaux{clear : left;
+	background-color : red;
+margin : 0 0 0 10px;;
+position : relative;}
+
+#facebook, #twitter, #rss{
+	display : inline;
 }
+#facebook a, #twitter a, #rss a{
+	display : inline-block;
+	width : 62px;
+	height : 62px;
+	text-indent : -999px;
+	position : absolute;
+}
+#facebook a{background : url('../images/puce_facebook.png') no-repeat left top;
+
+} 
+#twitter a{background : url('../images/puce_twitter.png') no-repeat left top;
+top : 44px;
+left : 42px;
+
+}
+#rss a{background : url('../images/puce_rss.png') no-repeat left top;
+left : 86px;
+}
+
+ #facebook a:hover, #twitter a:hover, #rss a:hover{
+	background-position : left center;
+}
+#facebook a:active, #twitter a:active, #rss a:active{
+	background-position : left bottom;
+}
+
 /*------------ FIN MENU DE PAGE ---------------------*/
+/* ---------------PAGE --------------------------------*/
+
+#content h2, #page, #fin_page{float : right;}
+#content h2{ position : relative;
+	margin : 0 0 -5px;
+	width : 780px ;
+	height : 65px;
+	line-height : 50px;
+	text-transform : uppercase;
+	color : #069;
+	text-indent : 25px;
+	background : url('../images/bg_h3Page.png') no-repeat left top;	
+}
+#page{
+	position : relative;
+	width : 750px;
+	padding :0 0 10px 30px;
+	background : url('../images/bg_page.png') repeat-y left top;
+}	
+#page a{
+	color : #069;
+	text-decoration : underline;
+	}
+#page p input{
+	margin-left : 0;}
+#page p a{
+	margin-left : 5px;}
+#fin_page{
+	width : 780px;
+	height : 20px;
+	background : url('../images/bg_finPage.png') no-repeat left top;
+	}
+#profil, #contact{
+	position : relative;
+	width : 97%;
+	/*background-color : red;*/
+}	
+#profil p{ text-align : right;
+color : #069;
+text-decoration : underline;}	
+
+#modif_profil a{
+	display:inline-block;
+}
+#modif_profil img{
+	border : 2px solid #069;
+	}
+#contact_form{position : relative;border-left : 1px solid #069; width : 78% ;float : right;margin-top : 10px;}
+
+
+#modif_profil label, #contact_form label{
+	clear : right;
+	position : relative;
+	display : block;
+	width : 75%;
+	height : 20px;
+	line-height : 20px;
+	vertical-align : middle;
+	margin : 6px 0;
+}
+#contact_form label{width : 50%;}
+
+#contact_form label, #contact_form p, #contact_form div {margin-left : 30px;}
+
+#avatar, #contact address{
+	float : left;
+	padding : 10px 35px 0 10px;
+	text-align : center;}
+#avatar a{
+	display : block;
+}
+#infos{
+	border-left : 1px solid #069;
+	padding :10px 0 0 30px ;
+}
+
+#infos label input, #contact_form label input{
+	width : 200px;
+	float : right;
+	border :1px solid #ccc;
+	margin-left : 3px;
+}
+#infos p, #contact_form p{
+	width : 75% ;
+	margin-top : 6px;
+	text-align : left;
+	color : #000;
+text-decoration : none;
+}
+#contact_form p{margin-top : 10px;margin-bottom : 6px;}
+#infos p:last-child{
+	margin-left : 3px;
+}
+#infos  p label, #contact_form  p label{
+	display : inline-block ;
+	width : auto ;
+	margin : 0;
+	vertical-align : middle ;
+	
+}
+#infos #birthday{ margin-left : 12%;}
+#infos  p label.radio{
+	padding :0  3px 0 34%;
+}
+#infos p label input, #contact_form p label input{ 
+clear : both;
+width : auto;
+}
+#contact_form input.btn{clear : both;}
+#infos input.btn, #contact_form input.btn{
+	width : 114px;
+	height : 30px;
+	margin-right : 26px;
+	border : none;
+	background : transparent url('../images/btn_form.png') no-repeat left top;
+	cursor : pointer;
+	color : #069;
+	}
+#infos input.btn:hover, #contact_form input.btn:hover{background-position : left center;}
+#infos input.btn:active, #contact_form input.btn:active{
+	background-position : left bottom;
+	color : #fff;}
+#contact_form #champ_com{width : auto; height : auto;}	
+
+#contact_form textarea{clear : both;width : 450px; height : 140px;}
+/*------------------- FIN PAGE-----------------------------------*/
+/*-------------------- FOOTER -------------------------------------*/
+#footer{position : relative;clear : both;
+width : 75%;
+margin : 30px auto 10px auto;}
+#footer li{display : inline;
+padding : 0 10px;}
+
+#footer a{color : #fff;
+font-weight : bold;
+cursor : pointer;
+	text-decoration : underline;
+}
+#footer a:hover{color : #069;}
+
+
+/*--------------------- FIN FOOTER -------------------------*/

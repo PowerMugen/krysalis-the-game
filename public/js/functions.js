@@ -3,9 +3,11 @@ function init()
 	// Apparition du 2eme niveau du menu principal
 	
 	slideBackground();
+	slideMenuContent();
 	
 	// CARROUSEL JQUERY
 	carrousel.init($('#carrousel'));
+	
 	
 }
 
@@ -28,9 +30,10 @@ function slideBackground()
 	$('#ul_principal li').each(
 		function(){
 			var className =	$(this).attr('id');
+			var position = $(this).position();
 			$(this).hover(
 				function(){
-					$('#ul_principal').addClass(className);
+					$('#ul_principal').addClass(className).stop().animate({backgroundPosition: position.left + " 2px"});
 				},
 				function(){
 					$('#ul_principal').removeClass(className);
@@ -103,11 +106,22 @@ var carrousel ={
 		 carrousel.timer = window.setInterval('carrousel.next()', 5000);
 	},
 }
-
+// --------------------------MENU CONTENU -----------------------------
+function slideMenuContent(){
+		$('h4').next().hide();
+		$('h4').click(function(){
+			 if($(this).next('ul').is(':hidden')){
+            $('h4').next('ul:visible').slideUp(); //:visible toutes les div visibles.
+            $(this).next('ul').slideDown();				   
+			 }
+		});
+}
+//--------------------------FIN MENU CONTENU -------------------------------
 /***************************/
 /* initialisation du site  */
 /***************************/
 
 $(function(){
 	init();
+		 
 });
