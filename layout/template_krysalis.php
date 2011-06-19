@@ -9,6 +9,7 @@
 <link rel="stylesheet" type="text/css" media="handeld" href="css/handeld.css" />
 <link rel="stylesheet" type="text/css" media="screen" href="css/screen.css" /> 
 <script src="js/jquery1.6.1.js" type="text/javascript"></script>
+<script src="js/jquery.backgroundPosition.js" type="text/javascript"></script>
 <script src="js/functions.js" type="text/javascript"></script>
 </head>
 <body>
@@ -17,10 +18,11 @@
 	<?php include  FILEROOT.'layout/partials/menu_main.php'; ?>	
 	<!--<img src="images/logo_temp.png" alt="Krysalis" />-->
 	
-  <?php include  FILEROOT.'modules/content.php'; ?>	
+  <?php include FILEROOT.'modules/content.php'; ?>	
   <!--<div class="flleft">flleft</div>
   <div class="flright">flright</div>
 	<br class="clear" /> 
   <div>retourdans le flux</div>-->
+  </div>
 </body>
 </html>

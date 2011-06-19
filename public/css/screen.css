@@ -13,8 +13,9 @@ body{
 }
 
 #content{
+	position :relative;
 clear : right;
-margin : 75px 10px 0 10px;
+margin : 75px 5px 0;
 }
 
 .flleft {float:left;}
@@ -132,19 +133,19 @@ margin : 75px 10px 0 10px;
 
 }
 #menu_main .jeux {
-	background : transparent url('../images/fond_blancTransparent.png') 435px 2px no-repeat;
+	background : transparent url('../images/fond_blancTransparent.png') 100% 2px no-repeat;
 }
 #menu_main .communaute {
-	background : transparent url('../images/fond_blancTransparent.png') 295px 2px no-repeat;
+	background : transparent url('../images/fond_blancTransparent.png') 800px 2px no-repeat;
 }
 #menu_main .joueurs {
-	background : transparent url('../images/fond_blancTransparent.png') 195px 2px no-repeat;
+	background : transparent url('../images/fond_blancTransparent.png') 800px 2px no-repeat;
 }
 #menu_main .enquete {
-	background : transparent url('../images/fond_blancTransparent.png') 95px 2px no-repeat;
+	background : transparent url('../images/fond_blancTransparent.png') 800px 2px no-repeat;
 }
 #menu_main .krysalis {
-	background : transparent url('../images/fond_blancTransparent.png') 0px 2px no-repeat;
+	background : transparent url('../images/fond_blancTransparent.png') 800px 2px no-repeat;
 }
 #ul_principal ul{
 	margin : 0;}
@@ -225,7 +226,7 @@ margin : 75px 10px 0 10px;
 	}
 /*-------------- FIN DU CARROUSEL -----------------*/	
 /*------------  MENU DE PAGE ---------------------*/
-#menu_content{margin : 0;line-height : 38px;}
+#menu_content{margin : 0;line-height : 38px; float : left;}
 #menu_content a{
 	display :block;
 	width : 201px;
@@ -240,12 +241,13 @@ margin : 75px 10px 0 10px;
 	margin :0 0 0 10px ; }
 #menu_content  ul a{
 	display :block;
-	width : 201px;
+	width : inherit;
 	height : 32px;
-	margin-top : -10px;
+	margin-top : -8px;
 	vertical-align : middle;
 	text-indent : 32px;
 	color : #fff;
+	font-size : 0.9em;
 	background : url('../images/puce_catContent.png') no-repeat left center;
 }
 #menu_content  ul li:first-child a{
@@ -267,8 +269,28 @@ a.decal_categ{
 	color : #fff;
 	background-position : left bottom;
 	}
-.categorie li{
-	/*background-color : red;*/
-	background-image : ('../images/puce_catContent.png');
-}
+
 /*------------ FIN MENU DE PAGE ---------------------*/
+/* ---------------PAGE --------------------------------*/
+/*------------------- FIN PAGE-----------------------------------*/
+#content h2, #page, #fin_page{float : right;}
+#content h2{ position : relative;
+	margin : 0 0 -5px;
+	width : 780px ;
+	height : 65px;
+	line-height : 50px;
+	text-transform : uppercase;
+	color : #069;
+	text-indent : 25px;
+	background : url('../images/bg_h3Page.png') no-repeat left top;	
+}
+#page{
+	width : 750px;
+	padding :0 0 10px 30px;
+	background : url('../images/bg_page.png') repeat-y left top;
+}	
+#fin_page{
+	width : 780px;
+	height : 20px;
+	background : url('../images/bg_finPage.png') no-repeat left top;
+	}

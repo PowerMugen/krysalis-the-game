@@ -28,9 +28,10 @@ function slideBackground()
 	$('#ul_principal li').each(
 		function(){
 			var className =	$(this).attr('id');
+			var position = $(this).position();
 			$(this).hover(
 				function(){
-					$('#ul_principal').addClass(className);
+					$('#ul_principal').addClass(className).stop().animate({backgroundPosition: position.left + " 2px"})
 				},
 				function(){
 					$('#ul_principal').removeClass(className);
@@ -111,3 +112,4 @@ var carrousel ={
 $(function(){
 	init();
 });
+$('#background') .click(function(){ $(this) .animate({backgroundPosition: '500px 150px'}) .animate({backgroundPosition: '-20px 250px'}) ; });
