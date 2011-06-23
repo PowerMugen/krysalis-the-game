@@ -4,7 +4,7 @@
 
 /* Page */
 html { font-size: 100%; /* Évite un bug d'IE 6-7. (1) */ }
-body { margin: 0; padding: 1em; /* Remettre à zéro si nécessaire. */ : ; /* Pensez à utiliser une collection de polices (2), par ex: ; font-family: Arial, Helvetica, FreeSans, sans-serif; */ font-size: .8em; /* À adapter pour la police choisie. (3) */ line-height: 1.4; /* À adapter au design. (4) */ color: black; background: white; }
+body { margin: 0; padding: 1em; /* Remettre à zéro si nécessaire. */  /* Pensez à utiliser une collection de polices (2), par ex: ; font-family: Arial, Helvetica, FreeSans, sans-serif; */ font-size: .8em; /* À adapter pour la police choisie. (3) */ line-height: 1.4; /* À adapter au design. (4) */ color: black; background: white; }
 
 /* Titres */
 h1, h2, h3, h4, h5, h6 { margin: 1em 0 .5em 0; /* Rapproche le titre du texte. (5) */ line-height: 1.2; font-weight: bold; /* Valeur par défaut. (6) */ font-style: normal; }
