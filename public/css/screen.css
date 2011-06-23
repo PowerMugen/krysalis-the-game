@@ -134,7 +134,7 @@ margin : 75px 5px 0;
 
 }
 #menu_main .jeux {
-	background : transparent url('../images/fond_blancTransparent.png') 100% 2px no-repeat;
+	background : transparent url('../images/fond_blancTransparent.png') no-repeat 250px 2px ;
 }
 #menu_main .communaute {
 	background : transparent url('../images/fond_blancTransparent.png') 800px 2px no-repeat;
@@ -146,7 +146,7 @@ margin : 75px 5px 0;
 	background : transparent url('../images/fond_blancTransparent.png') 800px 2px no-repeat;
 }
 #menu_main .krysalis {
-	background : transparent url('../images/fond_blancTransparent.png') 800px 2px no-repeat;
+	background : transparent url('../images/fond_blancTransparent.png') 0px 2px no-repeat;
 }
 #ul_principal ul{
 	margin : 0;}
@@ -311,7 +311,7 @@ left : 86px;
 
 /*------------ FIN MENU DE PAGE ---------------------*/
 /* ---------------PAGE --------------------------------*/
-/*------------------- FIN PAGE-----------------------------------*/
+
 #content h2, #page, #fin_page{float : right;}
 #content h2{ position : relative;
 	margin : 0 0 -5px;
@@ -342,7 +342,7 @@ left : 86px;
 	height : 20px;
 	background : url('../images/bg_finPage.png') no-repeat left top;
 	}
-#profil{
+#profil, #contact{
 	position : relative;
 	width : 97%;
 	/*background-color : red;*/
@@ -357,7 +357,10 @@ text-decoration : underline;}
 #modif_profil img{
 	border : 2px solid #069;
 	}
-#modif_profil label{
+#contact_form{position : relative;border-left : 1px solid #069; width : 78% ;float : right;margin-top : 10px;}
+
+
+#modif_profil label, #contact_form label{
 	clear : right;
 	position : relative;
 	display : block;
@@ -367,7 +370,11 @@ text-decoration : underline;}
 	vertical-align : middle;
 	margin : 6px 0;
 }
-#avatar{
+#contact_form label{width : 50%;}
+
+#contact_form label, #contact_form p, #contact_form div {margin-left : 30px;}
+
+#avatar, #contact address{
 	float : left;
 	padding : 10px 35px 0 10px;
 	text-align : center;}
@@ -379,23 +386,24 @@ text-decoration : underline;}
 	padding :10px 0 0 30px ;
 }
 
-#infos label input{
+#infos label input, #contact_form label input{
 	width : 200px;
 	float : right;
 	border :1px solid #ccc;
 	margin-left : 3px;
 }
-#infos p{
+#infos p, #contact_form p{
 	width : 75% ;
 	margin-top : 6px;
 	text-align : left;
 	color : #000;
 text-decoration : none;
 }
+#contact_form p{margin-top : 10px;margin-bottom : 6px;}
 #infos p:last-child{
 	margin-left : 3px;
 }
-#infos  p label{
+#infos  p label, #contact_form  p label{
 	display : inline-block ;
 	width : auto ;
 	margin : 0;
@@ -406,11 +414,12 @@ text-decoration : none;
 #infos  p label.radio{
 	padding :0  3px 0 34%;
 }
-#infos p label input{ 
+#infos p label input, #contact_form p label input{ 
 clear : both;
 width : auto;
 }
-#infos input.btn{
+#contact_form input.btn{clear : both;}
+#infos input.btn, #contact_form input.btn{
 	width : 114px;
 	height : 30px;
 	margin-right : 26px;
@@ -419,7 +428,27 @@ width : auto;
 	cursor : pointer;
 	color : #069;
 	}
-#infos input.btn:hover{background-position : left center;}
-#infos input.btn:active{
+#infos input.btn:hover, #contact_form input.btn:hover{background-position : left center;}
+#infos input.btn:active, #contact_form input.btn:active{
 	background-position : left bottom;
 	color : #fff;}
+#contact_form #champ_com{width : auto; height : auto;}	
+
+#contact_form textarea{clear : both;width : 450px; height : 140px;}
+/*------------------- FIN PAGE-----------------------------------*/
+/*-------------------- FOOTER -------------------------------------*/
+#footer{position : relative;clear : both;
+width : 75%;
+margin : 30px auto 10px auto;}
+#footer li{display : inline;
+padding : 0 10px;}
+
+#footer a{color : #fff;
+font-weight : bold;
+cursor : pointer;
+	text-decoration : underline;
+}
+#footer a:hover{color : #069;}
+
+
+/*--------------------- FIN FOOTER -------------------------*/

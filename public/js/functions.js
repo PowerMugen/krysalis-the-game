@@ -33,7 +33,7 @@ function slideBackground()
 			var position = $(this).position();
 			$(this).hover(
 				function(){
-					$('#ul_principal').addClass(className).stop().animate({backgroundPosition: position.left + " 2px"})
+					$('#ul_principal').addClass(className).stop().animate({backgroundPosition: position.left + " 2px"});
 				},
 				function(){
 					$('#ul_principal').removeClass(className);

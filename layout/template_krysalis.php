@@ -23,6 +23,7 @@
   <div class="flright">flright</div>
 	<br class="clear" /> 
   <div>retourdans le flux</div>-->
+  <?php include  FILEROOT.'layout/partials/footer.php'; ?>	
   </div>
 </body>
 </html>
