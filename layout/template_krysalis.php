@@ -4,10 +4,10 @@
 <base href="<?php echo WEBROOT; ?>" />
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title><?php echo $siteInfos['title']; ?></title>
-<link rel="stylesheet" type="text/css" media="screen" href="css/reset.css" /> 
-<link rel="stylesheet" type="text/css" media="print" href="css/print.css" /> 
+<link rel="stylesheet" type="text/css" media="all" href="css/reset.css" /> 
 <link rel="stylesheet" type="text/css" media="handeld" href="css/handeld.css" />
-<link rel="stylesheet" type="text/css" media="screen" href="css/screen.css" /> 
+<link rel="stylesheet" type="text/css" media="screen" href="css/screen.css" />
+<link rel="stylesheet" type="text/css" media="print" href="css/print.css" />  
 <script src="js/jquery1.6.1.js" type="text/javascript"></script>
 <script src="js/jquery.backgroundPosition.js" type="text/javascript"></script>
 <script src="js/functions.js" type="text/javascript"></script>
@@ -18,12 +18,12 @@
 	<?php include  FILEROOT.'layout/partials/menu_main.php'; ?>	
 	<!--<img src="images/logo_temp.png" alt="Krysalis" />-->
 	
-  <?php include FILEROOT.'modules/content.php'; ?>	
-  <!--<div class="flleft">flleft</div>
-  <div class="flright">flright</div>
-	<br class="clear" /> 
-  <div>retourdans le flux</div>-->
-  <?php include  FILEROOT.'layout/partials/footer.php'; ?>	
-  </div>
+	<?php include FILEROOT.'modules/content.php'; ?>	
+    <!--<div class="flleft">flleft</div>
+    <div class="flright">flright</div>
+    <br class="clear" /> 
+    <div>retourdans le flux</div>-->
+    <?php include  FILEROOT.'layout/partials/footer.php'; ?>	
+    </div>
 </body>
 </html>

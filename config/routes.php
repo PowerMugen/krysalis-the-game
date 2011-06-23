@@ -1,14 +1,6 @@
 <?php
 $routes = array(
   'modules' => array(
-    'investigation' => array(
-      'modulePath' => 'investigation/',
-      'config' => array(),
-      'pages' => array(
-        'index' => 'index.php',
-        'enquete' => 'index.php',
-      ),
-    ),
     'home' => array(
       'modulePath' => 'home/',
       'config' => array(),
