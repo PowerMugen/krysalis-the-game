@@ -26,7 +26,7 @@ margin : 75px 5px 0;
 /* -----------HEADER ------------------ */
 
 #header{
-	margin : 5px 10px 0 10px;	
+	margin : 5px 15px 0 10px;	
 
 }
 #password, #identifiant{
@@ -72,7 +72,7 @@ margin : 75px 5px 0;
 #recherche{
 	position : absolute;
 	top : 0;
-	right : 10px;
+	right : 15px;
 	z-index : 1000;
 }
 
@@ -80,7 +80,7 @@ margin : 75px 5px 0;
 	width : 57px;
 	height : 38px;
 	border : none;
-	margin : -4px 0 0 6px ;
+	margin : 0 0 0 6px ;
 	background : transparent url('../images/btn_recherche.png') no-repeat left top;
 	text-indent : -9999px;
 }
@@ -90,13 +90,20 @@ margin : 75px 5px 0;
 #btn_recherche:active{
 	background-position : left bottom;
 }
-#champ_recherche{
-	width : 185px ; /* largeur de l'image de fond - le padding left*/
+#recherche label{
+	display : block;
+	float : left;
+	width : 260px;
 	height : 42px ;
+	margin-top : 0;
+	background : transparent url('../images/fond_champRecherche.png') no-repeat left top;
+	text-align : left;
+	
+}
+#champ_recherche{
 	border : none;
-	line-height : 37px;
-	background : transparent url('../images/fond_champRecherche.png') no-repeat left center;
-	padding-left : 75px;	
+	background-color : transparent;
+	margin :9px 0 0 75px;	
 	color : #666666;
 }
 
@@ -106,8 +113,7 @@ margin : 75px 5px 0;
 	position : relative;
 	margin : 2px 10px;	
 	width: 713px;
-	background : transparent url('../images/fond_blancTransparent.png')  800px 2px no-repeat;
-	height:36px;
+	height : 36px;
 }
 
 #ul_principal li {
@@ -135,7 +141,6 @@ margin : 75px 5px 0;
 	left:0;
 
 }
-/*
 #menu_main .jeux {
 	background : transparent url('../images/fond_blancTransparent.png') no-repeat 250px 2px ;
 }
@@ -150,7 +155,7 @@ margin : 75px 5px 0;
 }
 #menu_main .krysalis {
 	background : transparent url('../images/fond_blancTransparent.png') 0px 2px no-repeat;
-}*/
+}
 #ul_principal ul{
 	margin : 0;}
 #ul_principal ul.hidden{
@@ -381,6 +386,7 @@ text-decoration : underline;}
 	float : left;
 	padding : 10px 35px 0 10px;
 	text-align : center;}
+#contact address{color : #069;}
 #avatar a{
 	display : block;
 }
