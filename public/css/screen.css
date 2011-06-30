@@ -233,6 +233,7 @@ margin : 75px 5px 0;
 	font-size : 1.8em;
 	width : 293px;
 	margin-left : -37px;
+	cursor : pointer;
 }
 .navigation h3.active{
 	background-position : right bottom;
@@ -441,7 +442,7 @@ text-decoration : none;
 	vertical-align : middle ;
 	
 }
-/*#infos select{border : 1px solid #ccc;}*/
+#infos select{border : 1px solid #ccc;}
 #infos #birthday{ margin-left : 12%;}
 #infos  p label.radio{
 	padding :0  3px 0 34%;
@@ -466,7 +467,7 @@ width : auto;
 	color : #fff;}
 #contact_form #champ_com{width : auto; height : auto;}	
 
-#contact_form textarea{clear : both;width : 450px; height : 140px;}
+#contact_form textarea{clear : both;width : 450px; height : 140px; border : 1px solid #ccc;}
 
 /************************************************/
 /*        PAGE PUBLICATIONS                     */
