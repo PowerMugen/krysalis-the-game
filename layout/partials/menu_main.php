@@ -24,8 +24,8 @@
         <li id="joueurs" onmouseover="display_ss_menu('ssMenu_joueurs');" onmouseout="display_ss_menu('ssMenu_joueurs');">
         	<a href="users/">Joueurs</a>
             <ul id="ssMenu_joueurs" class="hidden">
-                <li><a href="javascript : void(0);">informations personnelles</a></li>
-                <li><a href="javascript : void(0);">avancée dans le jeu</a></li>
+                <li><a href="users/">informations personnelles</a></li>
+                <li><a href="users/">avancée dans le jeu</a></li>
                 <li><a href="javascript : void(0);">échangez vos cartes</a></li>
                 <li><a href="javascript : void(0);">téléchargements</a></li>
             </ul>

@@ -9,7 +9,7 @@
                     <label><strong> Pseudo : </strong><input type="text"/></label>
                     <label><strong> E-mail : </strong><input type="text"/></label>
                     <p>
-                    	<label for="com"><strong>Commentaire</strong><input name="com"  id="com"type="radio"/></label>
+                    	<label for="com"><strong>Commentaire</strong><input name="com"  id="com" type="radio" checked="checked"/></label>
                     	<label for="probleme" class="radio"><strong>Problème</strong><input type="radio" name="com"  id="probleme"/></label>
                     </p>
                     <label id="champ_com"><textarea></textarea></label>

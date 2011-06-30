@@ -3,16 +3,37 @@ function init()
 	// Apparition du 2eme niveau du menu principal
 	
 	slideBackground();
+	//ssMenuMain();
 	slideMenuContent();
-	
+	EmptyInput();
 	// CARROUSEL JQUERY
 	carrousel.init($('#carrousel'));
 	
 	
 }
+// Vider les champs input type text lors d'un focus
+EmptyInput = function(){
+	$('#connexion input[type=text]').focus(function(){$(this).attr('value','');});
+	$('#connexion input[type=password]').focus(function(){$(this).attr('value','');});
+	$('#recherche input[type=text]').focus(function(){$(this).attr('value','');});
+}
 
 
 // Apparition du 2eme niveau du menu principal
+/*ssMenuMain = function(){
+		$('#ul_principal li').each(function(){
+			/*$(this).hover(function(){
+				$(this +' ul').className = 'visible';	
+			},function(){
+				$(this).find('ul').className = 'hidden';	
+			});*/	
+	/*		$(this).mouseover(function(){
+				$(this).find('ul').className = '';
+				$(this +' ul').className = 'visible';	
+									  });
+		});
+}*/
+
 
 function display_ss_menu( element ) {
 	var etat = document.getElementById( element ).className;
@@ -33,7 +54,7 @@ function slideBackground()
 		$(this).hover(
 			function(){
 				var position = $(this).position();
-				console.log(position.left);
+				
 				$('#ul_principal').addClass(className);
 				$('#ul_principal').stop().animate({backgroundPosition: position.left + " 2px"});
 				$(this).find('a:first').css({'color' : '#333'});
@@ -59,13 +80,16 @@ var carrousel ={
 	
 	init : function(elem){
 		this.nbSlide = elem.find('.slide').length;
-		//alert(this.nbSlide);
 		
 //		créer la pagination
 		elem.append('<div class="navigation"></div>');	
 		for( var i = 1; i <= this.nbSlide; i++){
 			elem.find('.navigation').append('<h3>' + i +'</h3>');
 		}
+		for( var i = this.nbSlide/2; i <= this.nbSlide; i++){
+			$('.navigation h3').eq(i).addClass('bas');
+		}
+		
 		
 		elem.find('.navigation h3').click(function(){
 			carrousel.gotoSlide($(this).text());
@@ -81,6 +105,7 @@ var carrousel ={
 		
 		elem.mouseover(carrousel.stop);
 		elem.mouseout(carrousel.play);
+		elem.find('.navigation h3').hover(carrousel.navOver,carrousel.navOut);
 		//alert('test');	
 	},
 	
@@ -111,10 +136,30 @@ var carrousel ={
 		 window.clearInterval(carrousel.timer);
 		 carrousel.timer = window.setInterval('carrousel.next()', 5000);
 	},
+	navOver : function(){
+	if($(this).hasClass('bas')){
+		$(this).css({'margin-top':'-34px','line-height' : '153px'});
+		$(this).next('h3').css({'margin-top':'82px'});
+	}else{
+		$(this).css({'margin-top':'-5px'});
+		$(this).next('h3').css({'margin-top':'82px'});
+	}
+	},
+	navOut : function(){
+	if($(this).hasClass('bas')){
+		$(this).css({'margin-top':'0','line-height' : '82px'});
+		$(this).next('h3').css({'margin-top':'0'});
+	}else{
+	$(this).css({'margin-top':'0'});
+	$(this).next('h3').css('margin-top','0px');
+	}
+}
+
+	
 }
 // --------------------------MENU CONTENU -----------------------------
 function slideMenuContent(){
-		$('h4').next().hide();
+		$('#menu h4').next().hide();
 		$('h4').click(function(){
 			 if($(this).next('ul').is(':hidden')){
             $('h4').next('ul:visible').slideUp(); //:visible toutes les div visibles.

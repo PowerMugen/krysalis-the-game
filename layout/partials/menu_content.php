@@ -2,10 +2,9 @@
 <ul id="menu">
 	<li><h4><a>Informations personnelles</a></h4>
     	<ul>
-        	<li><a href="">mon profil</a></li>
-            <li><a href="" class="decal_categ">mes liens</a></li>
-            <li><a href="">publications</a></li>
-            <li><a href="" class="decal_categ">liste des amis <span>(2)</span></a></li>
+        	<li><a href="krysalis/">mon profil</a></li>
+            <li><a href="users/publications.html"  class="decal_categ">publications</a></li>
+            <li><a href="">liste des amis <span>(2)</span></a></li>
         </ul>
     </li>
     <li><h4><a>Avancée dans le jeu</a></h4>
