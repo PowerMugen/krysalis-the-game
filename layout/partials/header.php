@@ -7,7 +7,7 @@
             </legend>-->
             <label for="identifiant"><input type="text" name="identifiant" id="identifiant" value="identifiant"/></label>
             <label for="password"></label>
-            <input name="password" id="password"/>
+            <input name="password" id="password" type="password" value="mot de passe"/>
             <input type="submit" value="connexion" id="btn_connexion"/>
             </fieldset>
         </form>

@@ -1,6 +1,6 @@
 @charset "utf-8";
 /* ------ GENERAL --------------- */
-body{
+body{background-attachment : fixed;
 	background-image : url('../images/fond_principal.jpg');
 	background-position : center top;
 	padding : 0;
@@ -63,7 +63,7 @@ margin : 75px 5px 0;
 }
 #header img.right{
 	float : right;
-	margin : 10px 10px 0 0;
+	margin : 16px 10px 0 0;
 	}
 /* FIN HEADER*/	
 /* --------------- MENU PRINCIPAL + RECHERCHE ------------------------- */
@@ -81,6 +81,7 @@ margin : 75px 5px 0;
 	height : 38px;
 	border : none;
 	margin : 0 0 0 6px ;
+	cursor : pointer;
 	background : transparent url('../images/btn_recherche.png') no-repeat left top;
 	text-indent : -9999px;
 }
@@ -139,19 +140,20 @@ margin : 75px 5px 0;
 	font-size : 14px;
 	top: 36px;
 	left:0;
-
 }
+#ul_principal li ul li a{font-size : 15px;}
+#ul_principal li ul li:hover{margin-top : -2px; font-weight : bold; text-shadow : 0 0 5px #fff ;  }
 #menu_main .jeux {
-	background : transparent url('../images/fond_blancTransparent.png') no-repeat 250px 2px ;
+	background : transparent url('../images/fond_blancTransparent.png') no-repeat 421px 2px ;
 }
 #menu_main .communaute {
-	background : transparent url('../images/fond_blancTransparent.png') 800px 2px no-repeat;
+	background : transparent url('../images/fond_blancTransparent.png') 287px 2px no-repeat;
 }
 #menu_main .joueurs {
-	background : transparent url('../images/fond_blancTransparent.png') 800px 2px no-repeat;
+	background : transparent url('../images/fond_blancTransparent.png') 192px 2px no-repeat;
 }
 #menu_main .enquete {
-	background : transparent url('../images/fond_blancTransparent.png') 800px 2px no-repeat;
+	background : transparent url('../images/fond_blancTransparent.png') 96px 2px no-repeat;
 }
 #menu_main .krysalis {
 	background : transparent url('../images/fond_blancTransparent.png') 0px 2px no-repeat;
@@ -206,7 +208,7 @@ margin : 75px 5px 0;
 .navigation{
 	position :absolute;
 	top : 18px;
-	right : 16px;
+	right : 15px;
 }
 .navigation h3{
 	color : white;
@@ -216,15 +218,33 @@ margin : 75px 5px 0;
 	line-height : 82px;
 	vertical-align : middle;
 	padding-left : 23px;
-	background : url('../images/carrousel/btn_pagHaut.png') no-repeat top left;
+	background : url('../images/carrousel/btn_pagHaut.png') no-repeat right top;
+}
+.navigation h3.bas{
+	background : url('../images/carrousel/btn_pagBas.png') no-repeat right top;
 }
 
-.navigation h3:hover, .navigation h3.active{
-	background-position : left bottom;
+.navigation h3:hover, .navigation .active:hover{
+	position : absolute;
+	z-index : 50;
+	background-position : 0 -215px;
+	height : 133px;
+	line-height : 92px; /* centrer le texte : largeur de l'onglet(92) + 5 px de margin top*/
+	font-size : 1.8em;
+	width : 293px;
+	margin-left : -37px;
+}
+.navigation h3.active{
+	background-position : right bottom;
 }
 
 .navigation h3:active{
-	background-position : left top;
+	position : absolute;
+	z-index : 50;
+	background-position : 0 -82px;
+	margin-top : 10px;
+	margin-left : -37px;
+	/*margin-top : -11px;*/
 }
 
 
@@ -233,6 +253,8 @@ margin : 75px 5px 0;
 	padding : 111px 69px 10px 69px;
 	background : url('../images/bg_resumeHome.png') repeat-y center top;
 	}
+	
+#resume a, #resume:visited{color : #369; text-decoration : underline;}
 /*-------------- FIN DU CARROUSEL -----------------*/	
 /*------------  MENU DE PAGE ---------------------*/
 #menu_content{ position : relative;float : left;}
@@ -419,6 +441,7 @@ text-decoration : none;
 	vertical-align : middle ;
 	
 }
+/*#infos select{border : 1px solid #ccc;}*/
 #infos #birthday{ margin-left : 12%;}
 #infos  p label.radio{
 	padding :0  3px 0 34%;
@@ -444,6 +467,31 @@ width : auto;
 #contact_form #champ_com{width : auto; height : auto;}	
 
 #contact_form textarea{clear : both;width : 450px; height : 140px;}
+
+/************************************************/
+/*        PAGE PUBLICATIONS                     */
+/************************************************/
+#articles_publies{margin-top : 10px; clear : both}
+#page h4{font-variant : small-caps;font-size: 1.3em;;}
+
+.article{position : relative;clear : both;}
+.conteneur_img{
+	position : relative;
+	width : 263px; 
+	min-height : 138px;
+	background : url('../images/bg_publiImg.png') no-repeat left top;
+	float : left;}
+.publi_img{padding : 5px 0 0 5px;
+width : 250px;
+height : 125px;
+overflow: hidden;}
+
+.resume_article{float : right; width : 60%;margin :0 20px 10px 0;}
+.resume_article h5{margin : 0; font-size : 1.1em;}
+.resume_article p{margin : 0.25em 0;}
+
+
+
 /*------------------- FIN PAGE-----------------------------------*/
 /*-------------------- FOOTER -------------------------------------*/
 #footer{position : relative;clear : both;
