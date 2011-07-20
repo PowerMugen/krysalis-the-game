@@ -1,10 +1,10 @@
-<div id="content">
+﻿<div id="content">
     <div id="carrousel">
     	<div id="slide1" class="slide">
         	<div class="visu">
         		<img src="images/carrousel/slide1.png" alt="Personnages de Krysalis" />
             </div>
-            <h3 class="title"><strong>D&eacute;couvrez les h&eacute;ros</strong> du monde de Krysalis</h3>
+            <h3 class="title"><strong>Découvrez les héros</strong> du monde de Krysalis</h3>
         </div>
         <div id="slide2" class="slide">
         	<div class="visu">
@@ -33,6 +33,6 @@
         
     </div>
     <div id="resume">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque urna nisl, tempor nec consectetur eget, condimentum non odio. Phasellus eget velit nec dolor rhoncus varius. Phasellus velit justo, ultrices id tristique eget, placerat eu nisi. Proin sagittis tellus egestas lectus iaculis egestas mollis enim fringilla. In facilisis accumsan mi et accumsan. Aliquam nunc ipsum, tincidunt id interdum at, ullamcorper at urna. Pellentesque ut pharetra massa. Sed nec arcu est, ut mattis leo. Aliquam nibh velit, pretium vel ultrices et, suscipit ut nulla. Duis faucibus eros felis, vel lobortis massa. Etiam condimentum mi sit amet leo pretium sed porttitor eros interdum. Vivamus ligula ligula, viverra id fermentum porta, luctus in metus. Etiam est tortor, scelerisque id consequat sollicitudin, gravida in sapien. Nullam laoreet ipsum ac massa varius sollicitudin blandit lorem suscipit. Aenean suscipit sapien eget sapien venenatis ornare. Nulla eu risus quam...<a href="javascript : void(0);">lire la suite</a></p>
+        <p><em>« 3 mars 2019 : notre équipe a interrompu la simulation de vie sur Mars qu'elle menait depuis bientôt deux ans, enfermée dans une station de la Zone 51. Notre QG ne répond plus. Toutes les fréquences sont muettes. Partout où nous allons, nous ne trouvons que des cadavres. Et pire encore. Ils ont envahi notre monde, et leurs intentions sont hostiles. Qui sont-ils ? D'où viennent-ils ? Mais surtout : combien de temps tiendrons-nous ? »</em>...<a href="krysalis/">lire la suite</a></p>
         </div><!-- -->
 </div>

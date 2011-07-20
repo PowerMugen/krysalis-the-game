@@ -21,14 +21,16 @@ margin : 75px 5px 0;
 .flleft {float:left;}
 .flright {float:right;}
 .clear { height:0; line-height:0; margin:0; padding:0; font-size:0; }
-
+a, button{outline : 0; cursor : pointer; clear : both; color : #069;}
+a, a:hover, a:link, a:active, a:visited{color : #069;}
 /* ------------FIN GENERAL ------------------a*/
 /* -----------HEADER ------------------ */
 
 #header{
 	margin : 5px 15px 0 10px;	
-
 }
+#connexion { float : right; border-left : 1px solid white; padding-left : 5px;}
+#inscription{color : white; font-weight : bold; text-decoration : underline;margin :3px 380px -20px 0;display : block; text-align : right;}
 #password, #identifiant{
 	width : 125px;
 	height : 20px;
@@ -59,7 +61,8 @@ margin : 75px 5px 0;
 	text-align : right;
 	}
 #header img{
-	margin : -22px 0 0 20px;
+	clear : both;
+	margin-left : 20px;
 }
 #header img.right{
 	float : right;
@@ -491,9 +494,130 @@ overflow: hidden;}
 .resume_article h5{margin : 0; font-size : 1.1em;}
 .resume_article p{margin : 0.25em 0;}
 
+/******************************************************/
+/*             PAGES KRYSALIS                         */
+/******************************************************/
 
+#content h2.krysalis{ background : none; height : auto; line-height : normal; margin : 0 0 40px 30px; color : white; text-indent : 0; width : auto; float : none; font-weight : normal;}
+
+#content p.krysalis{width : 779px; margin : 0 auto; color : white;line-height : 21px;}
+#content a.suivant{
+	display : block;
+	float : right;
+	background : url('../images/bg_krysalisSuivant.png') no-repeat 27px 0;
+	width : 108px;
+	padding-top : 117px;
+	vertical-align : bottom;
+	text-align : center;
+	color : white;}
 
 /*------------------- FIN PAGE-----------------------------------*/
+
+/*---------------- MODULE ENQUETE -------------------------------*/
+#conteneur_jeu{
+width : 992px;
+height : 503px;
+background : url('../images/module_enquete/bg_conteneurJeu.png') no-repeat left top;
+position : relative;
+	}
+/*******************************************************************/
+/*                      PAGE PERSONNAGES                           */
+/*******************************************************************/
+#conteneur-jeu{position : relative;overflow : hidden;}
+#infos_joueur{height : 45px; margin : 0;}
+#infos_joueur li{display : inline; padding : 0 20px;}
+#infos_joueur:first-child{}
+#infos_joueur li img{background-color : white;}
+#infos_joueur li span{display : inline-block;  text-transform : uppercase; vertical-align : middle;}
+#infos_joueur a{display : inline-block;
+width : 126px ;
+height : 41px;
+background : url('../images/module_enquete/btn_fight.png') no-repeat left top;
+line-height : 41px;
+vertical-align : middle;
+text-align : center;
+text-transform : uppercase;
+color: white;
+font-size : 1.2em;}
+#infos_joueur a, #infos_joueur span{margin : -35px 10px 0 15px;}
+#infos_joueur a:hover{background-position : left center;}
+#infos_joueur a:active{background-position : left bottom;}
+#level_joueur{background : url('../images/module_enquete/bg_barrePA.png') no-repeat -70px 0;}
+#pa{background : url('../images/module_enquete/bg_barrePA.png') no-repeat -50px 0;}
+
+
+#bio_perso{
+	width : 735px;
+	height : 444px;
+	margin-left : 4px;
+	background : url('../images/module_enquete/bg_bioPerso.png') no-repeat left top;}
+
+
+#anderson, #montgomery, #oackley, #angeli, #jones, #roets, #maubriant, #miyamoto, #stanford{height : 444px;}
+
+#affich_perso img{margin : 20px 0 0 25px;}
+#affich_perso a{display : inline-block;
+width : 114px;
+height : 30px;
+margin-right : 20px;
+background : url('../images/module_enquete/btn_valider.png') no-repeat left top;
+text-align : center;line-height : 30px;
+vertical-align : middle;
+color : white;
+float : right;}
+#affich_perso a:hover{cursor : pointer; color : #069; background-position : left center;}
+#affich_perso a:active{color : white; background-position : left bottom;}
+#affich_perso p{width : 315px;float : right; margin : 50px 25px 0 -5px; color : white; } 
+#affich_perso span{text-transform : uppercase;font-size : 1.2em; font-weight : bold;}
+
+#angeli p{margin : 50px 25px 0 -30px;}
+#angeli a{margin-top : -50px;}
+#roets a{margin-top : -70px;}
+#maubriant a{margin-top : -50px;}
+#oackley a{margin-top : -50px;}
+#miyamoto a{margin-top : -50px;}
+#anderson a{margin-top : 10px;}
+
+
+#choix_perso
+{position : absolute;
+top : 12px;
+right : 66px;
+margin : 0;
+}
+
+#choix_perso button{ width : 34px;
+height : 17px;
+margin-left : 73px;
+text-indent : -9999px;
+border : none;
+overflow : hidden;}
+
+
+#prec{background : transparent url('../images/module_enquete/perso_prec.png') no-repeat center top ;}
+#suiv{background : transparent url('../images/module_enquete/perso_suiv.png') no-repeat center top ;}
+#choix_perso button:hover{background-position : center center;}
+#choix_perso button:active{background-position : center bottom;}
+
+#conteneur_perso{height : 402px;overflow : hidden;margin-top : 10px;}
+#conteneur_perso ul{margin : 2px;}
+#choix_perso li{height : 99px; margin : 2px 0 ; position : relative;}
+#choix_perso a{
+	width : 100%;
+	display : block;
+	position : absolute;
+	left : 0;
+	bottom : 0;
+	color : white;
+	height : 24px;
+	line-height : 24px;
+	vertical-align : middle;
+	text-align : center;
+	text-transform : uppercase;
+	font-size : 0.9em;
+	background : url('../images/module_enquete/bg_nomChoixPerso.png') no-repeat left top;}
+
+/*----------------------FIN MODULE ENQUETE-------------------------*/
 /*-------------------- FOOTER -------------------------------------*/
 #footer{position : relative;clear : both;
 width : 75%;

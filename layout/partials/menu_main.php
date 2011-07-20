@@ -12,8 +12,8 @@
         <li id="krysalis" onmouseover="display_ss_menu('ssMenu_home');" onmouseout="display_ss_menu('ssMenu_home');">
         	<a href="krysalis/">Krysalis</a>
             <ul id="ssMenu_home" class="hidden" >
-                <li><a href="javascript : void(0);">l'histoire</a></li>
-                <li><a href="javascript : void(0);">comment jouer</a></li>
+                <li><a href="krysalis/">l'histoire</a></li>
+                <li><a href="../krysalis/jouer.html">comment jouer</a></li>
                 <li><a href="javascript : void(0);">mener l'enquête</a></li>
                 <li><a href="javascript : void(0);">question fréquentes</a></li>
             </ul>

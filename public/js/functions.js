@@ -9,6 +9,9 @@ function init()
 	// CARROUSEL JQUERY
 	carrousel.init($('#carrousel'));
 	
+	persoPrec();
+	persoSuiv();
+	
 	
 }
 // Vider les champs input type text lors d'un focus
@@ -168,6 +171,35 @@ function slideMenuContent(){
 		});
 }
 //--------------------------FIN MENU CONTENU -------------------------------
+
+//PROBLEME : quand on surclique on se retrouve avec un décalage
+function persoSuiv(){
+	$('#suiv').click(function(){
+		var positionMenu = $('#conteneur_perso ul').css('margin-top');
+		positionMenu = parseInt(positionMenu);
+		console.log(positionMenu);
+		if(positionMenu < 2){
+			$('#conteneur_perso ul').stop().animate({'margin-top' : positionMenu +103 + "px"}); 
+		}
+	});
+}
+
+function persoPrec(){
+	$('#prec').click(function(){
+		var positionMenu = $('#conteneur_perso ul').css('margin-top');
+		positionMenu = parseInt(positionMenu);
+		console.log(positionMenu);
+		
+		if(positionMenu > -410){
+		$('#conteneur_perso ul').stop().animate({'margin-top' : positionMenu -103 + "px"}); 
+		}
+	});
+}
+
+
+//--------------------------MODE ENQUETE PAGE PERSOS------------------------
+
+//--------------------------FIN MODE ENQUETE PAGE PERSOS------------------------
 /***************************/
 /* initialisation du site  */
 /***************************/
