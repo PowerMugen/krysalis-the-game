@@ -63,15 +63,15 @@ function slideBackground()
 				$(this).find('a:first').css({'color' : '#333'});
 			},
 			function(){
-				$('#ul_principal').animate({backgroundPosition: "800px" + " 2px"});
+				$('#ul_principal').animate({backgroundPosition: "800px 2px"});
 				$(this).find('a:first').css({'color' : '#fff'});
 				$('#ul_principal').removeClass(className).stop();
 			}
 		);
 	});
 }
-	
-	
+
+
 
 //	CARROUSEL JQUERY
 
@@ -105,7 +105,13 @@ var carrousel ={
 		this.elem.find('.navigation h3:first').addClass('active');
 		
 		carrousel.play();
-		
+		$(window).blur(function() {
+			carrousel.stop();
+	   });
+		$(window).focus(function() {
+			carrousel.play();
+	   });
+	   
 		elem.mouseover(carrousel.stop);
 		elem.mouseout(carrousel.play);
 		elem.find('.navigation h3').hover(carrousel.navOver,carrousel.navOut);
@@ -137,7 +143,7 @@ var carrousel ={
 	},
 	play : function(){
 		 window.clearInterval(carrousel.timer);
-		 carrousel.timer = window.setInterval('carrousel.next()', 5000);
+		 carrousel.timer = window.setInterval('carrousel.next()', 4000);
 	},
 	navOver : function(){
 	if($(this).hasClass('bas')){

@@ -26,5 +26,13 @@ if (!file_exists($path = FILEROOT.'/modules/'.$module.'/'.$page.'.php')) {
 	$path = FILEROOT.'/modules/404.php';
 }
 
-// include du fichier correspondant
+// include des fichiers correspondant
+
+//ajout de la config du module
+$moduleConfig = FILEROOT.'modules/' . $module . '/config/class_' . $module . '.php';
+
+if (file_exists($moduleConfig)) {
+    include $moduleConfig;
+}
+//ajout du fichier de contenu
 include $path;
