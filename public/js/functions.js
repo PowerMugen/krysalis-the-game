@@ -20,6 +20,17 @@ EmptyInput = function(){
 	$('#connexion input[type=password]').focus(function(){$(this).attr('value','');});
 	$('#recherche input[type=text]').focus(function(){$(this).attr('value','');});
 }
+// suppression du fond jaune en autocomplete dans google chrome
+if (navigator.userAgent.toLowerCase().indexOf("chrome") >= 0) {
+	$(window).load(function(){
+		$('input:-webkit-autofill').each(function(){
+			var text = $(this).val();
+			var name = $(this).attr('name');
+			$(this).after(this.outerHTML).remove();
+				$('input[name=' + name + ']').val(text);
+			});
+		});
+	}
 
 
 // Apparition du 2eme niveau du menu principal
