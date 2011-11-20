@@ -1,10 +1,9 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Document sans titre</title>
-</head>
-
-<body>
-</body>
-</html>
+<div id="content">
+	<?php include  FILEROOT.'layout/partials/menu_contentCommunaute.php'; ?>
+	<h2>Carte des joueurs</h2>
+    <div id="page">
+    	      	carte des joueurs
+    </div>
+     <div id="fin_page"></div>
+     <br class="clear"/>
+</div>

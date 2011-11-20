@@ -1,3 +1,4 @@
 <div id="content">
-404
+<p>coucou</p>
+<img src="/images/error404.jpg"alt"erreur 404" />
 </div>

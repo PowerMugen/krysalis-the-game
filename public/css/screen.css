@@ -498,18 +498,30 @@ overflow: hidden;}
 /*             PAGES KRYSALIS                         */
 /******************************************************/
 
-#content h2.krysalis{ background : none; height : auto; line-height : normal; margin : 0 0 40px 30px; color : white; text-indent : 0; width : auto; float : none; font-weight : normal;}
-
-#content p.krysalis{width : 779px; margin : 0 auto; color : white;line-height : 21px;}
-#content a.suivant{
+#texte h2{ background : none; height : auto; line-height : normal; margin-bottom: 30px; color : white; text-indent : 0; width : auto; float : none; font-weight : normal;text-align : center;}
+#texte{width : 700px; margin : 0 auto;}
+#texte p{ color : white;line-height : 21px;}
+#content a.suivant, #content a.precedent{
+	position : absolute;
+	top : 100px;
 	display : block;
-	float : right;
-	background : url('../images/bg_krysalisSuivant.png') no-repeat 27px 0;
 	width : 108px;
 	padding-top : 117px;
 	vertical-align : bottom;
 	text-align : center;
 	color : white;}
+#content a.precedent{
+	background : url('../images/bg_krysalisPrecedent.png') no-repeat 27px 0;
+	 left : 0;}
+
+#content a.suivant{background : url('../images/bg_krysalisSuivant.png') no-repeat 27px 0;
+right : 0;}
+#content a.suivant:hover{background : url('../images/bg_krysalisSuivantHover.png') no-repeat 27px 0;
+}
+#content a.suivant:active{background : url('../images/bg_krysalisSuivantClic.png') no-repeat 27px 0;
+}
+#content a.precedent:hover{background : url('../images/bg_krysalisPrecedentHover.png') no-repeat 25px 0;}
+#content a.precedent:active{background : url('../images/bg_krysalisPrecedentClic.png') no-repeat 27px 0;}
 
 /*------------------- FIN PAGE-----------------------------------*/
 

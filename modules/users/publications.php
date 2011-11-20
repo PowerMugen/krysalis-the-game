@@ -1,5 +1,5 @@
 <div id="content">
-	<?php include  FILEROOT.'layout/partials/menu_content.php'; ?>
+	<?php include  FILEROOT.'layout/partials/menu_contentUser.php'; ?>
 	<h2>mes publications</h2>
     <div id="page">
     <!--------ARTICLES SUIVIS ----------------------------------------->
